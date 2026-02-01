@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<title>kajin_map</title>
+<meta name="description" content="百人一首の歌手から読み解く百人一首">
+<meta name="keywords" content="百人一首,百人一首覚え方,恋の歌,和歌,季節の歌,相関図">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!-- icons -->
+<meta name="google-adsense-account" content="ca-pub-4653135001447309"><!-- GoogleAdsenseのためのメタタグ -->
+  <link rel="icon" href="img2/favicon.svg">
+<link rel="icon" sizes="192x192" href="img2/100-1-icon.png">
+<link rel="100-1-icon" href="img2/100-1-icon.png">
+
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"><!--ナビ：https://fonts.google.com/selection/embed-->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP" rel="stylesheet"><!--マップ内font-->
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="css/reset.css" media="screen">
+<link rel="stylesheet" href="css/base.css" media="all">
+<!--<link rel="stylesheet" href="mapp.css" media="screen">-->
+<link rel="stylesheet" href="css/hum.css" media="screen">
+
+<style>
+
+
+/*下層ページにあたる*/
+
+#area{
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  overflow:scroll;
+}
+
+.uke{
+  border: none;  /*ifreamboxのfreamborderの代わり*/
+/*  background: #fea;   薄い黄色*/
+  width: 1222px;/*960px*/
+  height: 2900px;
+  text-align: center;
+  }
+  
+@media screen and (min-width: 868px){/*ここの中に768px以上の時の内容を記述*/
+#area{
+        overflow: hidden;
+      }
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!--library-->
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script><!--  easingかけたい時-->
+<script src="js/glad.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZWGWM5FZQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZWGWM5FZQ');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4653135001447309" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <header id="downheader">
+    <div class="header__inner">
+      <div class="downheaderdiv">
+        <h1 class="downheader_title"><a href="index.html"><iframe src="sozai/titlePink.html" width="120px" frameborder="0"></iframe></a></h1>
+      </div>
+      <div id="js-hamburger" class="navBtn"><!--hum button-->
+          <span></span>     
+          <span></span>     
+          <span></span>
+      </div>                  <!--end hum button-->
+
+      <div class="container">
+
+        <nav id="gnav" class="header_nav">
+            <ul class="nav-items">
+              <li class="nav-items"><a href="index.html#intro">about</a></li>
+              <li class="nav-items"><a href="map.html">map</a></li>
+              <li class="nav-items"><a href="profile.html">profile</a></li>
+              <li class="nav-items"><a href="goods.html">goods</a></li>
+              <li class="nav-items"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav><!-- /#gnav -->
+        </div><!--.container-->
+      </div><!--header__inner-->
+  </header><!-- /#header -->
+  
+  <main id="contents" class="contents">
+      <div class="container">
+      
+        <section id="betunointro"><!--idは新しいの。最初のセクションはtopにmarignかかっている-->
+        <h2 class="h2kakutitle">百人一首歌人マップ</h2>
+          <h3>歌人たちの相関図</h3>
+          <p>一首づつ選ばれた和歌の歌人たちの時代や血筋から構成された場所を表したマップとなっています。どこに誰がいるのか、何番同士が親子関係にあるのか、身分は何かなどを図式や細かい凡例で楽しめるようになっています。百人一首のペンネームではなく、本名で載せているため、その多くが藤原勢力を占めていることもこのマップから分かります。 </p>
+          
+          <div id="area">
+            <iframe src="sozai/mapp.html" frameborder="0" class="uke"></iframe>
+          </div>
+        </section><!--intro -->
+
+      <!--凡例のキャプション-->
+            <input type="checkbox" id="popup">
+            <label class="popup-open" for="popup">Map凡例</label>
+            <div class="popup-overlay">
+                <div class="popup-window">
+                    <p class="popup-text"><img src="img2/caption_map.svg" alt=""></p>
+                    <label class="popup-close" for="popup">
+                        <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="" y1="0" x2="18" y2="18" stroke="white" stroke-width="1"></line>
+                            <line x1="0" y1="18" x2="18" y2="0" stroke="white" stroke-width="1"></line>
+                        </svg>
+                    </label><!--popup-close-->
+                </div><!--popup-overlay-->
+            </div><!--popup-->
+      
+
+      </div><!-- /.container -->
+  </main><!-- /#contents -->  
+
+  <footer id="footer" class="footer">
+    <div class="container">
+
+      <div class="nav">
+        <ul class="pripol">
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="sitemap.html">サイトマップ</a></li>
+          <li><a href="index.html">TOPページへ</a></li>
+        </ul>
+      </div><!--nav-->
+      
+      <ul class="sns">
+        <!--        <li><a href="#" class="icon-x" title="X"></a></li>-->
+        <li><a href="https://note.com/238_yuki/n/nfb163f8c635b" class="icon-youtube" title="youtube"></a></li>
+        <li><a href="https://www.instagram.com/1song_100person/" class="icon-instagram" title="instagram"></a></li>
+        <!-- <li><a href="#" class="icon-whatsapp" title="whatsapp"></a></li>
+        <li><a href="#" class="icon-pinterest" title="Pinterst"></a></li> -->
+      </ul>
+      <p class="pagetop"><a href="#downheader">TOP</a></p>
+
+      <p class="references">
+        参考文献・出典
+        板野裕之「眠れないほど面白い百人一首」三笠書房 谷知子「百人一首解剖図鑑」エクスナレッジ 監修佐佐木幸綱「百人一首のひみつ 100」(株)主婦と生活社 橋本治「百人一首がよくわかる」講談社 目崎徳衛「百人一首の作者たち」角川文庫ソフィア 関幸彦「百人一首の歴史学」NHK ブックス
+        「新国語総合ガイド三訂版」京都書房
+         堀田善衛「定家明月記私抄」ちくま学芸文庫
+         監修山本博文
+        「角川まんが学習シリーズ第4巻日本の歴史~武士の目覚め編~」 Wikipedia 百人一首 / 歴代天皇 / 平安時代
+      </p>
+
+      <p class="copyright"><small>Copyrights &copy; japanese wa song All Rights Reserved.</small></p>
+    </div><!-- /.container -->
+  </footer><!-- /#footer -->
+  <script src="js/mainjavascript.js"></script>
+</body>
+</html>
+
+
+
