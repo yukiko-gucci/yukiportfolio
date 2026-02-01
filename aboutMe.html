@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>yukiko's portfolio</title>
+
+<meta name="description" content="portfolio">
+<meta name="keywords" content="作品,ポートフォリオ">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"><!--検索可避-->
+
+<link rel="icon" href="img/00_favicon.svg" type="image/svg+xml"><!--favicon-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reset.css" media="screen"><!--リセット-->
+<link rel="stylesheet" href="css/style.css" media="screen">
+<link rel="stylesheet" href="css/lightbox-2.11.2.css" media="screen">
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><!--library-->
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script><!--  easingかけたい時-->
+<script src="js/gladdy.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+    <header id="header" class="header">
+      <div class="header__inner">
+        <div class="headerdiv">
+          <h1 class="header_title">
+            <a href="index.html">
+                <img src="img/00_titleLogo1.svg" width="" alt="header_title">
+                <img src="img/00_titleLogo2.svg" width="" alt="header_title">
+            </a>
+          </h1><!--header_title-->
+        </div>
+        <div id="js-hamburger" class="navBtn"><!--hum button-->
+            <span></span>     
+            <span></span>
+            <span></span>     
+        </div><!--end hum button-->
+      <div class="container">
+        <div class="header-title">
+          <h1 class="header-logo"><a href="index.html"></a></h1>
+          <p class="header-msg"></p>
+        </div><!--header-title-->
+
+          <nav id="gnav" class="header_nav">
+            <ul class="container nav-items">
+              <li class="nav-items hvr-float-shadow"><a href="index.html">Top</a></li>
+              <li class="nav-items"><a href="index.html#about">about</a></li>
+              <li class="nav-items"><a href="index.html#works">works</a></li>
+              <li class="nav-items"><a href="index.html#contact">contact</a></li>
+            </ul>
+          </nav><!-- /#gnav -->
+        </div><!--.container-->
+      </div><!--header__inner-->
+    </header><!-- /#header -->
+    
+    <p class="pagetop"><a href="#header">to TOP</a></p>
+
+  <main>
+    <div class="innerMain fadeInOther">
+
+      <div id="about" class="pc2block AboutFadeIn">
+        <div class="block">
+          <h1>Profile</h1>
+          <h2>　ゆきこ　<a href="index.html#contact" class="more">Contact</a> </h2>
+          <div class="profImgDiv">
+            <img class="imgRound" src="img/prof_drawEdit500px.gif" width="100%" alt="プロフィール写真">
+          </div>
+          <div id="profile" class="profCon">
+              <p>
+              関東在住。武蔵野美術大学 通信教育課程・デザイン情報学科卒。<br> 
+              DTP・紙面を主に学んだのち、一般企業に就職。WEBデザインの訓練校で学んだのち、絶賛就活中。<br>
+              クライアントの要望を絵や図にしながら形にし、想像できるようなラフ画を作って打ち合わせを進める。<br>
+              アルバイトでウエディングのウェルカムボード、フォトスポットのイメージボード、ラフ画を制作。<br>
+              主にイラストを得意とし、温かみ、空気感のあるイラストを描く。風景・パース画・人物描写・動物なども描く。<br>
+              現在は写真編集のアルバイトをこなしながらサイト、イラスト制作のための研鑽を積む。（2024/12/4現在）。
+              </p>
+          </div><!--profCon-->
+        </div><!--block-->
+
+        <div class="block profList">
+
+          <div id="skill" class="profListEach">
+            <h3>PC SKILL</h3>
+            <ul>
+              <li>Microsoft Office 365(word/excel/Teams)</li>
+              <li>illustrator/PhotoShop</li>
+              <li>Visual Studio Code</li>
+              <li>DreamWeaver</li>
+              <li>MicrosoftOffice(Word/Excel/PowerPoint)</li>
+              <li>WordPress,JavaScript,jQuery</li>
+              <li>PremierPro/AfterEffect(勉強中)</li>
+              <li>figma(取り掛かり・調べ中)</li>
+            </ul>
+          </div><!--profListEach-->
+
+          <div id="quori" class="profListEach">
+            <h3>OTHER</h3>
+            <ul>
+              <li>第一種普通自動車免許</li>
+              <li>全商簿記、全商情報処理検定 ２級</li>
+              <li>ビジネス文書検定、全商電卓検定 1級</li>
+              <li>TOEIC 445点(易しめの日常会話レベル)</li>
+            </ul>
+          </div><!--profListEach-->
+          
+        </div><!--block-->
+        
+        
+            <div class="centaling block">
+                <div id="record" class="recordList">
+                  <h3>実績</h3>
+                  <ul>
+                    <li>ブログのアニメタイトル</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>          
+                </div><!--profListEach-->
+            </div><!--centaling-->
+        
+            <div id="kikkake" class="profListEach">
+              <h3>WEBに興味を持ったポイント</h3>
+
+              <h4>きっかけ</h4>
+              <p>2020年、コロナ発の通信大学の展示会でWEBを導入したところ、来場者が例年の5倍を記録。歴代の展示会の中でもぶっちぎりのTOPを記録し、WEBの拡散率を実感したことがきっかけです。</p>
+
+              <h4>利用率</h4>
+              <p>手軽に利用できるところから、気軽に来場できることがわかったが、各生徒の展示会から他生徒の作品に移る前に離脱してしまう課題が見られた。ページの最後に別の作品を載せること以上に対策が必要なことがわかった。</p>
+
+              <h4>♪優しいあの子にも教えたい</h4>
+              <p>訓練校での卒業制作のテーマは百人一首。非常に奥の深いテーマなものの、インドア派でおとなしめな人をターゲットにしている。私自身、学生時代は窓際で絵をいそいそ描くのが密かに好きだったこともあり、1人でも地味に楽しみたい、こっそり趣味を愛でたいと言った控えめで優しい方にもダイレクトに届けられるのも魅力の1つと考えている。</p>
+              <h4>爆発起爆剤</h4>
+              <p>いわゆる「バズり」の凄さは日々痛感している</p>
+            </div><!--profListEach-->
+
+    
+      </div><!--#about .aboutfadeIn-->
+
+
+      <div id="area">
+        <a class="seeBtn" href="index.html#contact">お問い合わせ</a>
+        <a class="seeBtn" href="index.html">TOPに戻る</a>
+      </div>
+
+    </div><!--.innerMain-->
+</main>
+    
+    <div class="liner"></div>
+    
+  <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footerlog">
+          <a href="index.html">
+            <img src="img/00_titleLogo1.svg" alt="header_title">
+            <img src="img/00_titleLogo2.svg" alt="header_title">
+          </a>
+        </div>
+        
+<!--         
+        <ul>
+          <li class="dasu">about
+            <ul>
+              <li><a href="index.html#about">プロフィール</a></li>
+              <li><a href="index.html#about">資格</a></li>
+              <li><a href="index.html#about">スキル</a></li>
+            </ul> 
+          </li>
+          
+          <li class="dasu">work
+            <ul>
+              <li><a href="index.html">サイト</a></li>
+              <li><a href="index.html#banner">バナー</a></li>
+              <li><a href="index.html#illust">イラスト</a></li>
+              <li><a href="index.html#logo">ロゴ</a></li>
+              <li><a href="index.html#animation">アニメーション</a></li>
+              <li><a href="index.html#pamphlet">パンフレット</a></li>
+              <li><a href="index.html#imageBoard">イメージボード</a></li>
+              <li><a href="#journal">取材</a></li>
+            </ul> 
+          </li>
+          <li class="dasu"><a href="index.html#contact">contact</a></li>
+        </ul>
+
+        
+        <ul class="footerNav">
+          <li>
+            <ul class="sns">
+                <li><a href="mailto:co.yuki.river@gmail.com" target="_blank" class="icon-envelop" title="mail"></a></li>
+            </ul>
+          </li>
+        </ul>      
+       -->
+      <p class="copyright"><small>Yukiko's works</small></p>
+    </div><!-- /.container -->
+  </footer><!-- /#footer -->
+</div><!--wrapper-->
+  <script src="js/mainjavascript.js"></script>
+</body>
+</html>

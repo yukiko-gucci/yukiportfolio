@@ -1,0 +1,1134 @@
+@charset "UTF-8";
+/*=================
+  Base Layout
+=================*/
+html {
+/*    scroll-padding-top: 200px; すべてのページ内ジャンプは200px分追加*/
+    box-sizing: border-box;
+    background: hsla(145,27%,91%,1.00);/*#E1EEE7*/
+    font-family: "Open Sans", "Yu Gothic medium",sans-serif;
+}
+html p{
+  line-height: 2.3;
+  font-size: 1.04375em;       /*16.7px*/
+  color: #373C38;
+}
+#wrapper{
+  max-width: 940px;  /*本当は980px(padding分-20px)で940px・基準*/
+  margin: 0 auto;
+  padding: 0 20px 0;   
+}
+/*grid*/
+.pc2block{
+  /*  background: #acc;        bgtest*/
+}
+.block{
+  /*  background: #fca;        bgtest*/
+  padding: 30px 6.5% 30px;
+  box-sizing: border-box;/*要素の幅や高さにパディングやボーダーの幅を含める*/
+}
+.pc3block .block3{
+  padding: 30px 12.5% 30px;
+}
+@media screen and (min-width: 768px) {    /*ここの中に768px以上の時の内容を記述*/
+        .pc2block,
+        .pc3block{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        /*2カラムの列幅*/
+        .pc2block .block{
+          width:48.9361%;  /*もと460pxに全体幅940px(980px-paddingの20px)*/
+        }
+        /*3カラムの列幅*/
+        .pc3block .block{
+          width: 31.9148%;  
+        }   
+
+         .pc3block .block3{
+          width: 31.9148%;  
+          padding: 30px 3.5% 30px;
+          margin-bottom: 5px;
+          box-sizing: border-box;/*要素の幅や高さにパディングやボーダーの幅を含める*/
+          }
+        /* 収まり良くするためのcss */
+        .pc3block::after{
+          content:"";
+          display: block;
+          width:35.9148%; /*300px/940px→450px*/   
+          }
+
+        /*pcになった時の文字サイズはem単位で計算*/
+}
+/* 他入れるためのcss */
+.otherMain{
+  padding: 30px 2.5% 0 6.5%;
+}
+
+/*=========================================
+  Modules =style?（Block）
+=========================================*/
+/*++++++++header++++++++*/
+.header_title {
+            width: 120px;
+            padding:20px 0 0 10%;
+/*          background: #eee;      bg text*/
+}
+
+@media screen and (min-width: 768px) {    /*ここの中に768px以上の時の内容を記述*/
+
+        .header_title{
+          width: 280px;
+        }
+        .header_title img{
+          display: inline;
+          width: 40%;
+        }
+}/*768px*/
+
+
+/*+++++pagetopボタンのCSS+++++*/
+.pagetop{
+  display: none;/*最初はhide.jqueryで出る*/
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+  z-index: 999;
+}
+.pagetop a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding-top: 12px;
+  box-sizing: border-box;
+  background: rgba(126,172,132,0.50);
+  border-radius: 2.5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+}
+.pagetop a:hover {
+  background: rgba(255,255,255,0.8);
+  color: #373C38;
+  font-weight: bold;
+}
+.pagetop a::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border-top: 1px solid #59220d;
+  border-right: 1px solid #373c38;
+  transform: rotate(-45deg);
+}
+/*---page top------*/
+
+/*++++++++++++++++*++++++++
+      nav(inHeader)
+*++++++++*++++++++++++++++*/
+
+/*ハンバーグナビの最初。見えなくさせてる*/
+.header_nav{
+  position: fixed;/*元はabsolute。スクロールした際にTopに止まってしまったままのメニューを動かす。一緒に.navBtnもfixed*/
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;  /*画面いっぱいにするにはw/hを左のような値にする*/
+  height: 100vh;
+  transition: ease .5s;
+  z-index: 0;
+  opacity: 0;
+}
+
+.header__inner{
+/*      background: #ecd;*/
+        align-items: center; /* 中央揃え */
+}
+
+/*clickしたときに出てきて*/
+#gnav.active{            /*activeは仮想class*/
+    opacity: 1;
+    background: #fff;
+    text-align: center;
+    z-index: 9;
+  }
+/* hanburgermenu.activeの時のメニューのcss
+  /navBtnをclickしたときだけ、出てくるliのfontsizeを大きくしたい。768px以上の時は反映させない*/
+#gnav.active .nav-items li {
+      padding-top: 80px;
+      padding-bottom: 50px;
+      font-size: 1.6em;
+      background: #33a;  /*test*/
+}      
+@media screen and (min-width: 768px) {/*960px*/
+      #gnav{
+        opacity: 1;
+      }
+      .header__inner{
+        display: flex;
+        width: 100%;/*100%*/
+        align-items: center;
+      }
+      .headerdiv {
+        flex: 1; /* ロゴ部分をフレックスで設定 */
+        }
+
+      .header_nav {
+          position: static;/*初期値*/
+          transform: initial;/*初期値に戻したい時に使用*/
+          width: 32.5625em;/*425px*/
+          height:50px;
+        }
+        /* nav ul li */
+      .nav-items{
+          width: 100%;      /*itemごとの幅*/
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding-top: 0;
+          padding-bottom: 0;
+          margin:0 2%;
+          flex: 1;/*li要素をフレックスで設定*/
+      }
+        .nav-items a {
+          display: flex;
+          align-items: center;/*縦の真ん中*/
+          justify-content: center;
+          height: 100%;
+          width: 100%;
+
+        }
+        .nav-items a:hover{
+          background: #fff;
+          border-radius: 5px;
+          transform: translate(0,-15px);
+          box-shadow: 3px 8px 10px 2px rgba(106,178,111,.5);
+          transition: background-color .5s 0s, transform .5s 0s;
+        }
+  }
+  
+/*+++++navボタン++++++++++;*/
+.navBtn{
+    display: block;
+    width: 22.5px;
+    top: 26px;
+    right:5%;
+    position: fixed;
+    background: #ffffff86;
+        /*◯を作るcss*/
+          padding:13px 9.5px;
+          border-radius: 50%;
+          z-index: 99;
+          cursor: pointer;
+ }
+
+   .navBtn span{/*太さの設定*/
+    display: block;
+    height: 1.5px;
+    width: 100%;
+    background: #373C38;/*藍墨茶*/
+    border-radius: 2px;
+    transition:all .3s ease-out;/*×の動きを変えるのはここ*/
+    cursor:pointer;
+  }
+  /*ボタンの3本線の余白 */
+ .navBtn span:nth-of-type(1),
+ .navBtn span:nth-of-type(2){
+    margin-bottom: 6px;
+  }
+  
+  /*バーガーボタンの transform 設定※activeはjavasのための仮想class*/
+   .navBtn.active span:nth-of-type(1){
+    transform:translateY(7.5px/*14px*/) rotate(45deg);/*1本目span14pxオトす→時計回り*/
+}
+  
+  .navBtn.active span:nth-of-type(2){
+   transform:rotate(45deg);
+    opacity: 0;   /*2本目span非表示*/
+  }
+
+  .navBtn.active span:nth-of-type(3){
+    transform:translateY(-7.5px/*-14px*/) rotate(-45deg);/*3本目span14pxアゲる→半時計回り*/
+  }
+@media screen and (min-width: 768px) {/*960px*/
+        /*  anavボタンはkesu    */
+         .navBtn span{            /*768pxで×は消す*/
+         display: none;          
+         }
+         .navBtn{
+           background: none;
+         }
+
+}
+/*-----gnavボタンの設定------------*/
+
+/*子要素の<section>のみ余白を入れる*/
+section > section {
+  margin-bottom: 76px;
+}
+/*+++++++++++++++++
+mainの設定
+++++++++++++++++++*/
+/*+++++++infomation++++++*/
+
+#info{
+  background: #fff;
+  border-radius:3px;
+  padding: 20px;
+}
+
+.infobox{
+    /*スクロール限を限定する*/
+  height: 150px;
+  overflow-y:scroll;
+}
+
+.info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.info-list dt {
+  width: 30%;
+  padding-left: 5px;
+  padding: 5px 0 0 0;
+  border-top: 1px #d8c7a0 dotted;
+}
+.info-list dd {
+  width: 70%;
+  padding: 5px 0;
+  border-top: 1px #d8c7a0 dotted;
+}
+.info-list :first-of-type {
+  border-top: none;
+}
+@media screen and (min-width: 768px){/*768px以上の時の内容を記述*/
+      .info-list dt {
+        width: 15%;
+      }
+      .info-list dd {
+        width: 85%;
+      } 
+}
+/*infomation hoverしたときに文字がでる*/
+.hoverApper{
+  opacity: 0;
+/*  transform: translate(130px,0);*/
+}
+
+a:hover .hoverApper{
+  display: inline;
+  opacity: 1;
+  transition: 1s;
+  transform: translate(0,0);
+  border:solid 1px #4C8BDB;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #fff;
+  background: #4C8BDB;
+  padding: 2.5px 2%;
+  
+}
+
+/*---------//infomation------------------*/
+
+
+header h1{/*titleは空けたくない*/
+  letter-spacing: 0;
+  margin-bottom: 26px;
+}
+
+header h1:before{/*titleは空けたくない*/
+  display: none;
+  background: rgba(255,255,255,0.00);
+}
+
+h1{
+  font-size: 2.2em;
+  padding-left: 3.191489%;/*30px*/
+  letter-spacing: .2em;
+  position: relative;
+  text-shadow: 6px 5px .8px #373C3830;
+  z-index: -4;
+  margin-bottom: 30px;
+}
+
+h1:before {
+  content: "";
+  position: absolute;
+  background: #9de5ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  left: -15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+h2{
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  padding:0.25em 0;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: linear-gradient(to right, rgba(45,119,242,1.00), transparent);
+}
+
+/*h2タイトルの右、もっと」ボタン*/
+.more{
+  float: right;
+  display: inline-block;
+  padding: 5px 5px 5px 10px;
+  background: #1266D0;
+  border-radius: 2em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13.5px;
+  line-height: 1;
+  margin-top: 4px;
+}
+.more:hover{
+  opacity: 0.7;
+  color: #fff;
+}
+/*三角アイコン*/
+.more::after {
+  content: "";
+  margin-bottom: 2px;
+  margin-left: 5px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: transparent 5px solid;
+  border-left-color: #ffffff;
+  vertical-align: middle;
+}
+.imgRound{
+  border-radius: 100%;
+}
+.name,
+.keyword  {
+  padding: 50px 0 0;
+  font-size: 1.4em;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: center;
+}
+.profCon p{
+  padding: 20px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/*PCスキルとOther*/
+.profList{
+  padding-top:14em;
+  line-height: 2.9;
+}
+
+.profListEach{
+/*  ここから4行h3をcenteringするためのcss*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #aaa;
+    padding: 0 2.127659574468085%;/*20px*/
+    margin-bottom: 65px;/*skillとotherの余白*/
+}
+
+.profListEach h3{
+  text-align: center;
+  background: #E1EEE7;/*背景色で線を消す*/
+  width: 30%;
+  position: relative;
+  top:-1.65em; 
+}
+
+.profListEach ul{
+  padding-bottom:40px;
+}
+.centaling{
+  display: flex;
+  justify-content: center; /* 横方向のセンタリング */ 
+}
+      .recordList{
+          align-items: center;
+          justify-content: center;
+        background: #dff;
+          width: 100%;
+          margin: 0 auto;
+          border: 3px solid #aaa;   
+          margin-bottom: 65px;/*skillとotherの余白*/
+      }
+
+
+
+
+/* workscorner contents */
+.workNavList{
+    margin-bottom: 40px;
+    width: 100%;
+}
+.workNavList li{
+  margin: 0 auto;
+  width:40%;
+  margin-bottom: 10px;
+  background: #ddd;
+  font-weight: bold;
+  font-size: 1.15em;  /*18px*/
+}
+
+.workNavList li a{
+  width:100%;
+  display: inline-block;
+  padding: 10px 0;
+  text-align: center;
+  cursor:pointer;
+  background: #64B88B50;
+}
+.workNavList li a:hover{
+  font-weight: bold;
+  background: #F2FBF7;
+  box-shadow:12px 12px 9px rgba(100,100,100,0.5);
+}
+
+@media screen and (min-width: 768px){/*768px以上の時の内容を記述*/
+       /*ボタン横ぐみにする*/
+       .workNavList{
+          display: flex;
+          flex-wrap: wrap;
+          white-space: nowrap;/*横書き強制表示*/
+        }
+        .workNavList li{
+          margin-left: 40px;
+          width: 18%;/*150px*/
+        }
+        .workNavList li a{
+          margin-right: 15px;
+          width: 100%;
+        }
+}/*@media min-width:768px*/
+
+/*++++++++++++++++++
+photoshop corner 
++++++++++++++++++++++ */
+/*２表示目の写真を消す*/
+  .two {
+    display: none;
+    opacity: 0;
+  }
+
+/*++++++++++++++++++
+webきっかけBox 
++++++++++++++++++++++ */
+
+#kikkake{
+  margin: 0 6.5%;
+  padding: 30px 3%;
+}
+#kikkake h3{
+  padding: 30px 0 5px;
+}
+
+/*++++++++++++++++++
+caption h3タイトルのCSS 
+・パンフレットリスト / journal.html
++++++++++++++++++++++ */
+
+.h3Caption{
+  padding-left: 3.4%;
+  font-size: 1.35em;
+}
+
+.worksContents{
+  margin: 40px 0 90px;
+}
+
+
+
+/*++++++++++++++++
+お問い合わせページ
++++++++++++++++++*/
+.entryTable {
+  width:100%;
+  border:2px solid #779F8A;
+  margin-bottom:30px;
+  border-collapse:collapse;
+}
+
+.entryTable th,
+.entryTable td {
+  padding:10px 20px;
+  border:1px solid #81AC96;
+}
+
+.entryTable th {
+/*  width:10em;*/
+  background:#BEDFD3;
+  text-align:left;
+}
+.entryTable caption {
+  margin:10px 0;
+}
+
+/*入力フォームの設定*/
+.entryTable input[type="text"],
+.entryTable input[type="email"],
+.entryTable textarea {
+  width:100%;
+  padding:10px;
+  border:1px solid #ccc;
+  box-sizing:border-box;
+  font-size:1em;
+}
+
+.entryTable input[type="text"]:focus,
+.entryTable input[type="email"]:focus,
+.entryTable textarea:focus {
+  background-color:#ffe;
+  outline:none;
+  border-left:5px solid #ffa700;
+}
+/*forcus時に表示されている例文を消す*/
+.entryTable input[type="text"]:focus::placeholder,
+.entryTable input[type="email"]:focus::placeholder,
+.entryTable textarea[name="comment"]:focus::placeholder{
+  color:transparent;
+}
+
+@media screen and (max-width:768px){
+      .entryTable{
+/*      align-items: center;*/
+        display: block;
+        border: none;
+        }
+
+      /*項目を一列にする（但しこのままだと項目が横いっぱいに広がらない）*/
+      .entryTable th,
+      .entryTable td {
+        display: block;
+        box-sizing: border-box;
+        border: none;
+        padding:4% .25%;
+        }
+        
+      .entryTable th {
+        text-align: center;
+        font-weight: bold;
+        padding: 10px 0;
+
+        }
+      .entryTable td {
+          text-align: left;
+          margin-bottom: 25px;
+        }
+
+      .entryTable tr {
+        display: flex;
+        flex-direction: column;
+        }    
+  }
+
+@media screen and (max-width:768px){
+      .entryBtns {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .entryBtns input {
+        width: 30%;
+        margin-top: 5px;
+      }
+}
+
+/* ++++++++++++++++++
+webサイト見るページのbtn CSS 
++++++++++++++++++++++ */
+#area{
+    /*枠*/
+    position:relative;
+    margin:0 auto;
+    width: 45%;
+}
+.seeBtn{
+    position:relative;
+    top:0;
+    left:0;
+    display:block;
+    max-width: 210px;
+    height:100%;
+    padding: 20px;
+    margin: 50px auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: .5px solid #505050;
+    cursor: pointer;
+    text-align: center;
+    background-color:transparent;	/* 背景透明でアニメを表示させる */
+    overflow:hidden;
+    z-index:0;
+    transition:color .5s;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.seeBtn:hover{
+    color:#fff;
+}
+.seeBtn::before{		/* ここがアニメ：a要素の背面に出して文字が出るように【-9】設定 */
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    content:'';
+    width:120%;
+    height:100%;
+    background:rgba(233,198,109,1.00); /*通り過ぎるcolor*/
+    transform-origin:left top;
+    transform:skewX(-30deg) scale(0, 1);
+    transition:transform .6s;         /*スピード調節*/
+    z-index:-9;                       /*背景側に入れたい*/
+}
+
+.seeBtn:hover::before{
+    transform-origin:right top;
+    transform:skewX(-30deg) scale(1, 1);
+}
+
+.liner{
+    width: 100%;
+    height: 2px; /* 横線の太さを指定 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #047755, rgba(0, 0, 0, 0)); /* グラデーションを指定 */
+    margin: 80px 0 40px; /* 上下に余白 */
+}
+
+.sns-btn {
+    margin: 8px 0 58px;
+    display: flex;
+}
+.sns-btn li{
+	padding-left: 25px;
+}
+
+.sns-btn li:hover{
+	transform:scale(1.13);
+}
+
+/*++++++++++++++
+footer
++++++++++++++++*/
+#footer{
+  width: 100%;
+}
+
+.footerlog{
+  width: 8em;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+
+.navH{
+	width:80%;
+/*  margin: 0 auto;*/
+	padding-top:40px;
+	cursor:pointer;
+}
+
+.navH ul li{
+	line-height:2;
+	color:#006;
+	border-top:none;
+  padding-left: 12px;
+}
+
+.navH ul li a:hover{
+    font-weight: bold;
+
+}
+
+
+/*----------footer---------*/
+
+/* spriteのためのcss。問題：どうやって％と隠す固定枠を設定できるのか */
+#pc2block{
+  position: relative;
+}
+
+
+
+/*+++++++++++++++++
+    footer
+++++++++++++++++++++*/
+
+/*2つの塊をﾚｽﾎﾟﾝｼﾌﾞで横並び/縦並びにする*/
+.footer-area{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.school-info{
+  width: 30%;
+}
+.school-info span{
+  display: block;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  font-weight: bold;
+}
+/*タイトルと住所名(ﾘｽﾄ一番最初だけ)に下余白*/
+.school-info dt.footer-title,
+.school-info li:first-of-type{
+    margin: 0 0 10px 0;
+}
+/*tel faxの下に余白*/
+.school-info li dt{
+    margin:0 10px 0 0;
+}
+/*項目を一列にする*/
+.school-info li dt,
+.school-info li dd{
+    display: inline-block;
+}
+
+.footer-sitemap{
+  width: 65%;
+}
+.footer-sitemap li{
+    padding: 10px 20px;
+    display: inline-block;
+}
+.footer-sitemap ul li a{
+  position: relative;/*くのための相対配置*/
+  padding: 0 10px;
+}
+/*liのく※正方形を作りw/hにborder,傾ける*/
+.footer-sitemap ul li a::before{
+	position: absolute;
+	top:40%;
+	left:-10px;
+  width: 7px;/*正方形の枠*/
+  height:7px;
+	content: '';
+  border-top: 2px solid #423030;
+  border-right: 2px solid #2C1A1A;
+  transform: rotate(45deg);
+}
+.copywrite{
+  display: block;
+  text-align: right;
+}
+
+@media screen and (max-width:1090px) {
+    .footer-area{
+        align-items: flex-start;
+    }
+      .school-info{
+          width:40%;
+      }
+      .footer-sitemap{
+          width:56%;
+      }
+}
+@media screen and (max-width:860px) {
+    /*要素をcenter,boxを作ってまとめる,下余白*/
+  
+      .footer-area .footer-area-ul{
+        width: 70%;
+        margin: 0 auto 40px;
+    }
+  
+  /*縦ブロックでおさめる*/
+    .school-info,
+    .footer-sitemap{
+        width:100%;
+    }
+    .school-info{
+        text-align: center;
+        margin:0 0 70px 0;
+        padding: 0 0 40px 0;
+        border-bottom:2.5px solid rgba(12,121,68,1.00);
+/*    background: linear-gradient(to right, rgba(0, 0, 0, 0), #047755, rgba(0, 0, 0, 0));  グラデーションを指定     }*/
+}
+
+/*++++++++++++++++
+  journal.html
++++++++++++++++;*/
+/* 取材過程のli css */
+  .journalProcess{
+    margin-bottom:50px;
+  }
+
+  .journalProcess ul>li{
+    margin-bottom:20px;
+    padding: 18px 0 18px 20px;
+    background:#fff;
+    font-size: 1.13em;
+  }
+
+  .journalProcess ul ol{
+    padding-top: 20px;
+    padding-left: 13px;
+    list-style-type: decimal; /* 通常の1, 2, 3,... */
+    }
+
+  .journalProcess ul ol li{
+
+    line-height: 1.9;
+    }
+
+  /* 3つの項目に分けてそれぞれの記録を見せる */
+  #schooling1,      /*事前課題*/
+  #schooling2,      /*スクーリング*/
+  #schooling3{      /*事後課題*/
+    padding:30px 12px 60px;
+  }
+
+  .h3_Midashi{
+    padding: 18px 0 20px;
+    font-size: 1.3em;
+    background: url("../img/line_limark_yellow.png") repeat-x 0 29px;
+  }
+
+  /* ポイントの枠とポイントの項目 */
+  .scDiv{
+    padding:10px;
+  }
+  .h4point{
+    font-size: 1.4em;
+    padding-top: 20px;
+    padding-left: 2px;
+  }
+  .h5QA{
+    padding:30px 0 5px;
+    font-size: 1.25em;
+  }
+
+
+    
+
+/*sitetopページのcss*/
+.aboutSiteList{
+  padding-top: 20px;
+  padding: 20px 2% 20px;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, rgba(189,237,222,1) 0%, rgba(225,255,253,0) 100%); 
+}
+
+.aboutSiteList li{
+  line-height: 1.5;
+  font-size: 1.2em;
+  color: #262626;
+  padding-bottom: 7px;
+  font-weight: bold;
+}
+
+.h3Sitetop{
+  padding-left: 3px;
+  padding-top: 40px;
+  margin-bottom: 15px;
+}
+
+/*百人一首の補足note*/
+
+
+
+/*++++++++++++++++++
+group herite
++++++++++++++++++*/
+.v_line_left {
+  border-left: thin solid #15462A;
+  padding: 0 120px 0 0;
+  background: #874747;
+}
+  
+  .groupdiv {
+    position: relative;
+}
+/*線上の〇のCSS*/
+
+    .maru span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: solid 1px #15462A;
+      position: absolute;
+      top: 60%;
+      left: calc( -10px - 5px + 1px );
+      transform: translateY(-50%);
+      background: #FFF;
+    }
+
+/*++++++++++++++++++
+bloglist.html CSS
++++++++++++++++++*/
+.vide-wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 86%;
+  padding-top: 0%; /* これにより正方形のアスペクト比を維持 */
+  overflow: hidden;
+}
+
+.vide-wrapper video {
+  position: relative;
+  margin: 0 auto;/*中心に配置*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* これにより黒い余白が出ないように調整 */
+}
+
+@media screen and (min-width: 768px) {/*960px*/
+            .vide-wrapper {
+              width: 100%;
+              padding-top: 8.3%; /* これにより正方形のアスペクト比を維持 */
+            }
+            .vide-wrapper video {
+                width: 100%;
+                height: 59%;
+            }
+}  
+/*++++++++++++++++++
+bloglist.html CSS
++++++++++++++++++*/
+.pc3blockBlog .block3{
+  padding: 1.25% 3.5% 30px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+/*アイキャッチ直下の見出し*/
+.blogHeadline{
+  padding: 20px 4px 0;
+  font-weight: bold;
+  font-size: 1.23em;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 688px) {    /*ここの中に668px以上の時の内容を記述*/
+        .pc3blockBlog{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+        }
+        /*3カラムblogList Ver.の列幅*/
+        .pc3blockBlog .block{
+          width: 31.9148%;
+
+        }   
+         .pc3blockBlog .block3{
+          width: 31.9148%;  
+          padding: 1.25% 1.75% 15px;
+          margin-bottom: 5px;
+          margin: 0 .5% 20px;
+          box-sizing: border-box;/*要素の幅や高さにパディングやボーダーの幅を含める*/
+          }
+        /* 収まり良くするためのcss */
+        .pc3blockBlog::after{
+          content:"";
+          display: block;
+          width:35.9148%; /*300px/940px→450px*/   
+          }
+  /*pcになった時の文字サイズはem単位で計算*/
+}
+.blogBox .date{
+  text-align: right;
+  font-size: 12px;
+}
+.blogBox img{
+    width: 560px;
+    overflow: hidden;
+}
+.blogBox img:hover{
+  transform: scale(1.09);/*変形*/
+  opacity: .8;
+}
+
+/*++++++++++++++++++
+blog 個別記事 CSS
++++++++++++++++++*/
+.date_article{
+  margin-top: -30px;/*元々h2が過度余白あり。調整のためマイナスをいれる*/
+  text-align: right;
+}
+
+/*++++++++++++++++
+  animation
++++++++++++++++;*/
+/*header部分*/
+
+/*profiletoka about部分*/
+.AboutFadeIn{
+animation-name: fadeInAnime;
+animation-duration:2s;
+animation-delay: 1.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+/*アニメの名前は同じ。Durationを変えただけなのでOK*/
+.fadeInOther {                        
+  animation-name: fadeInAnime;
+  animation-duration:1.02s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+
+  @keyframes fadeInAnime{
+      0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*main部分:ちょっとしたから出す*/
+/*fuwaっと文字を出す*/
+section{
+  opacity: 0;
+  transform:translate(0,200px);
+  transition: 1.5s;
+}
+section.scrol{
+  opacity: 1;
+  transform:translate(0,0);
+}
+
+/*main部分:スクロールに合わせてマーカーをひく*/
+.c-marker {
+    background: -webkit-linear-gradient(left, rgba(168,225,197,1.00) 50%, transparent 50%);
+    background: -moz-linear-gradient(left, rgba(168,225,197,1.00) 50%, transparent 50%);
+    background: linear-gradient(left, rgb(255,250,153) 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 200% .8em; 
+    background-position: 100% .5em;
+    transition: 2s;
+}
+.c-marker.is-active{
+    background-position: 0% .5em;
+}
+.c-marker a:hover {
+  font-weight: bold;
+  font-size: 1.15em;
+  
+}

@@ -1,0 +1,487 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>yukiko's portfolio</title>
+
+<meta name="description" content="portfolio">
+<meta name="keywords" content="作品,ポートフォリオ">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"><!--検索可避-->
+
+<link rel="icon" href="img/00_favicon.svg" type="image/svg+xml"><!--favicon-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reset.css" media="screen"><!--リセット-->
+<link rel="stylesheet" href="css/style2.css" media="screen">
+<link rel="stylesheet" href="css/lightbox-2.11.2.css" media="screen"><!--sliderのためのCSS-->
+
+<style>
+.black{
+  background:#aaa;
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><!--library-->
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script><!--easingかけたい時-->
+<script src="js/lightbox-2.11.2.js"></script><!--バナーのslider用のjs-->
+<script src="js/gladdy.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+
+    <header id="header" class="header fadeIn">
+      <div class="header__inner">
+        <div class="headerdiv">
+          <h1 class="header_title">
+            <a href="index.html">
+                <img src="img/00_titleLogo1.svg" width="" alt="header_title">
+                <img src="img/00_titleLogo2.svg" width="" alt="header_title">
+            </a>
+          </h1><!--header_title-->
+        </div>
+        <div id="js-hamburger" class="navBtn"><!--hum button-->
+            <span></span>     
+            <span></span>
+            <span></span>     
+        </div><!--end hum button-->
+      <div class="container">
+        <div class="header-title">
+          <h1 class="header-logo"><a href="index.html"></a></h1>
+          <p class="header-msg"></p>
+        </div><!--header-title-->
+
+          <nav id="gnav" class="header_nav">
+            <ul class="container nav-items">
+              <li class="nav-items hvr-float-shadow"><a href="index.html">Top</a></li>
+              <li class="nav-items"><a href="#about">about</a></li>
+              <li class="nav-items"><a href="#works">works</a></li>
+              <li class="nav-items"><a href="#contact">contact</a></li>
+            </ul>
+          </nav><!-- /#gnav -->
+        </div><!--.container-->
+      </div><!--header__inner-->
+    </header><!-- /#header -->
+    
+    <p class="pagetop"><a href="#header">to TOP</a></p>
+    
+    <main id="main">
+      <div class="innerMain">
+        <div class="black">
+          <a href="index2.html">
+          <img src="title.svg" width="100%" height="20%" alt="コリ物語">
+        </a>
+        </div>
+
+        <div id="about" class="pc2block AboutFadeIn">
+            <div class="block">
+              <h1>about</h1>
+              <h2>自己紹介・川口由起子</h2>
+              <div class="profImgDiv">
+                <img class="imgRound" src="img/prof_drawEdit500px.gif" width="100%" alt="プロフィール写真">
+              </div>
+              <div id="profile" class="profCon">
+                  <p>
+                  関東在住。武蔵野美術大学 通信教育課程・デザイン情報学科卒。<br> 
+                  DTP・紙面を主に学んだのち、一般企業に就職。WEBデザインの訓練校で学んだのち、絶賛就活中。<br>
+                  クライアントの要望を絵や図にしながら形にし、想像できるようなラフ画を作って打ち合わせを進める。<br>
+                  アルバイトでウエディングのウェルカムボード、フォトスポットのイメージボード、ラフ画を制作。<br>
+                  主にイラストを得意とし、温かみ、空気感のあるイラストを描く。風景・パース画・人物描写・動物なども描く。<br>
+                  </p>
+              </div><!--profCon-->
+            </div><!--block-->
+
+            <div class="block profList">
+              <div id="skill" class="profListEach">
+                <h3>PC SKILL</h3>
+                <ul>
+                  <li>illustrator/PhotoShop</li>
+                  <li>Visual Studio Code</li>
+                  <li>DreamWeaver</li>
+                  <li>MicrosoftOffice(Word/Excel/PowerPoint)</li>
+                  <li>WordPress,JavaScript,jQuery</li>
+                  <li>PremierPro/AfterEffect(勉強中)</li>
+                </ul>
+              </div><!--profListEach-->
+              <div id="quori" class="profListEach">
+                <h3>OTHER</h3>
+                <ul>
+                  <li>第一種普通自動車免許</li>
+                  <li>全商簿記、全商情報処理検定 ２級</li>
+                  <li>ビジネス文書検定、全商電卓検定 1級</li>
+                  <li>TOEIC 445点(易しめの日常会話レベル)</li>
+                </ul>
+              </div><!--profListEach-->
+              
+            </div><!--block-->
+            
+            <!--以下はWEBに興味を持ったきっかけ。さらっとポイントとして後から入れた-->
+              <div id="kikkake" class="profListEach">
+                <h3>WEBに興味を持ったポイント</h3>
+                <h4>きっかけ</h4>
+                <p>2020年、コロナ発の通信大学の展示会でWEBを導入したところ、来場者が例年の5倍を記録。歴代の展示会の中でもぶっちぎりのTOPを記録し、WEBの拡散率を実感したことがきっかけです。</p>
+
+                <h4>利用率</h4>
+                <p>手軽に利用できるところから、気軽に来場できることがわかったが、各生徒の展示会から他生徒の作品に写る前に離脱してしまう課題が見られた。ページの最後に別の作品を載せること以上に対策が必要なことがわかった。</p>
+
+                <h4>♪優しいあの子にも教えたい</h4>
+                <p>訓練校での卒業制作のテーマは百人一首。非常に奥の深いテーマなものの、インドア派でおとなしめな人をターゲットにしている。私自身、学生時代は窓際で絵をいそいそ描くのが密かに好きだったこともあり、1人でも地味に楽しみたい、こっそり趣味を愛でたいと言った控えめで優しい方にもダイレクトに届けられるのも魅力の1つと考えている。</p>
+<!-- 
+                <h4>爆発起爆剤</h4>
+                <p>いわゆる「バズり」の凄さは日々痛感している</p>
+ -->
+              </div><!--profListEach-->
+
+            
+        </div><!--#about .fadeIn-->
+        
+        
+
+
+            <section id="works" class="otherMain">
+              <h1>works</h1>
+
+              <div class="workNav">
+                <ul class="workNavList">
+                  <li><a href="#site">サイト</a></li>
+                  <li><a href="#banner">バナー</a></li>
+                  <li><a href="#illust">イラスト</a></li>
+                  <li><a href="#logo">ロゴ</a></li>
+                  <li><a href="#animation">アニメーション</a></li>
+                  <li><a href="#panfu">パンフレット</a></li>
+                  <li><a href="#imageBoard">イメージボード</a></li>
+                  <li><a href="#journal">取材</a></li>
+                </ul>
+              </div><!--workNavList-->
+
+              <section id="site">
+                <h2>サイト</h2>
+                <p>画像クリックで詳細ページへ</p>
+                <ul class="pc2block">
+                    <li class="block">
+                      <a href="site_hyakuninisshu.html">
+                      <img src="img/thumbnail_website_100-1.jpg" alt="siteimage">
+                      <p>人から読み継ぐ百人一首</p>
+                      </a>
+                    </li>
+                   <li class="block">
+                      <a href="site_herite.html">
+                      <img src="img/thumbnail_website_herite.jpg" alt="siteimage">
+                      <p>レストランHérite(エリテ)</p>
+                      </a>
+                    </li>
+                    <li class="block">
+                      <a href="site_piero.html">
+                        <img src="img/thumbnail_website_piero.jpg" alt="siteimage">
+                        <p>大道芸人「ピエロのキーちゃん」のホームページ</p>
+                      </a>
+                    </li>
+                </ul>
+              </section>
+
+              <section id="banner" class="Lbox">
+                <h2>バナー</h2>
+                <ul class="pc2block">
+                    <li class="block"><a href="img/banner_long_1.jpg" data-lightbox="view" title="バナー<br>キット・スワッグのバナー<br>ターゲット：30代〜女性。主婦。<br>ナチュラル感と自然的なかわいさを出したいため、ウッドの枠とピンクのリボンを入れている<br>">
+                        <img src="img/banner_long_1.jpg" alt=""></a></li>
+
+                    <li class="block"><a href="img/banner_long_2-600.jpg" data-lightbox="view" title="バナー<br>押し花キットのバナー<br>ターゲット：30代〜女性,独身女性から主婦まで。手作業やインドア派のペルソナ設定<br>柔らかい、大人な可愛さ、楽しいイメージをテーマとする">
+                        <img src="img/banner_long_2-600.jpg" alt=""></a></li>
+
+                    <li class="block"><a href="img/banner_long_3-600.jpg" data-lightbox="view" title="バナー<br>フラワーキットのバナー<br>ターゲット：30代〜女性,独身女性から主婦まで。手作業やインドア派のペルソナ設定<br>ナチュラル,ボタニカル感がテーマ">
+                        <img src="img/banner_long_3-600.jpg" alt=""></a></li>
+
+                    <li class="block"><a href="img/banner_square_1-250.jpg" data-lightbox="view" title="バナー<br>フラワーキットのバナー<br>ターゲット：30代〜女性,独身女性から主婦まで。手作業やインドア派のペルソナ設定<br>シンプルとさりげないエレガントさが欲しい。">
+                        <img src="img/banner_square_1-250.jpg" width="250" alt=""></a></li>
+
+                    <li class="block"><a href="img/banner_midiL_piano-400.png" data-lightbox="view" title="バナー<br>楽器店のセール<br>ターゲット：楽器を習いたいと思っている小中学生とその両親へ<br>春休みのセールに合わせて次学年に向けて良いスタートをきれる様なコンセプト">
+                        <img src="img/banner_midiL_piano-400.png" width="250" alt=""></a></li>
+
+                    <li class="block"><a href="img/banner_midiL_eat-400.png" data-lightbox="view" title="バナー<br>架空の大衆食堂<br>ターゲット：外仕事の30代〜70代男性。<br>とにかく安くてたくさん食べたい人に！70%を強調。">
+                        <img src="img/banner_midiL_eat-400.png" width="250" alt=""></a></li>
+                </ul>
+              </section>
+
+              <section id="illust">
+                <h2>イラスト</h2>
+                <h3>カットイラスト - スクエア</h3>
+                <ul class="pc3block">
+
+                    <li class="block3"><a href="img/illust_square3_natural.jpg" data-lightbox="view" title="イラスト<br>ナチュラル自然体">
+                        <img src="img/illust_square3_natural.jpg" width="300" alt="イラスト・ナチュラル"></a></li>
+                    <li class="block3"><a href="img/illust_icon_1.jpg" data-lightbox="view" title="イラスト<br>アイコン・シンプル">
+                        <img src="img/illust_icon_1.jpg" width="300" alt="イラスト・ナチュラル"></a></li>
+                    <li class="block3"><a href="img/illust_food.jpg" data-lightbox="view" title="foodイラスト">
+                        <img src="img/illust_food.jpg" width="300" alt=""></a><a href="">イラスト添付例</a></li>
+                    <li class="block3"><a href="img/illust_other_1.jpg" data-lightbox="view" title="テーマ：地球温暖化">
+                      <img src="img/illust_other_1.jpg" width="300" alt=""></a><a href="illustEx_choju.html">イラスト添付例</a></li>
+  
+                  </ul>
+                
+                <h3>カットイラスト - レターサイズ</h3>
+                <ul class="pc2block">
+                  <li class="block"><a href="img/illust_wedding_cover_3.jpg" data-lightbox="view" title="レターイラスト<br>ウエディングイラスト">
+                    <img src="img/illust_wedding_cover_3.jpg" width="300" alt="イラスト・ナチュラル"></a>
+                    <p class="caption">レターサイズイラスト</p>
+                  </li>
+                  <li class="block"><a href="img/illust_wedding_cover_3.jpg" data-lightbox="view" title="レターイラスト<br>ウエディングイラスト">
+                    <img src="img/illust_wedding_cover_3.jpg" width="300" alt="イラスト・ナチュラル"></a>
+                    <p class="caption">レターサイズイラスト</p>
+                  </li>
+                </ul>
+              </section>
+              
+              
+              <section id="logo">
+                <h2>ロゴ</h2>
+                <p>クリックして詳細を表示</p>
+                <ul class="pc3block">
+                
+                  <li class="block3"><a href="img/logo_1.svg" data-lightbox="view" title="ロゴ<br>対象：架空レストラン<br>和の家紋は地元でよく使われている蔦、洋はお酒にも拘ったフレンチであるため、ワインを注いだ部分を表している。">
+                    <img src="img/logo_1.svg" width="300" alt="ロゴ"></a>
+                    <p class="caption">架空レストランのロゴ<br><a href="logoSite.html" target="_blank">詳細ページ</a></p>
+                  </li>
+                  <li class="block3"><a href="img/logo2_flamingo.svg" data-lightbox="view" title="ロゴ<br>対象：動物園併設の架空のレストラン<br>シンプル、シックさがテーマ。シルエットからストロークを出して表現。">
+                    <img src="img/logo2_flamingo.svg" width="150" alt="ロゴ"></a>
+                    <p class="caption">都内の動物園内のカフェのロゴ</p>
+                  </li>
+                  <li class="block3"><a href="img/logo2_snake.svg" data-lightbox="view" title="ロゴ<br>対象：動物園併設の架空のレストラン<br>シンプル、シックさがテーマ。シルエットからストロークを出して表現。">
+                    <img src="img/logo2_snake.svg" width="180" alt="ロゴ"></a>
+                    <p class="caption">都内の動物園内のカフェのロゴ</p>
+                  </li>
+                </ul>
+              </section>
+              
+              <section id="animation">
+                <h2>アニメーション</h2>
+                <ul class="pc2block">
+                  <li class="block">
+                    <img src="img/animation_bouquet.png" width="" alt="animation"><!--31.333333%-->
+                    <p class="caption">draw</p>
+                  </li>
+                  <li class="block">
+                    <img src="img/animation_midnight.gif" width="" alt="animation">
+                    <p class="caption">draw</p>
+                  </li>
+                  <li class="block">
+                    <img src="img/animation_Champagne.gif" width="" alt="animation">
+                    <p class="caption">sinemagraph</p>
+                  </li>
+                </ul>
+              </section>
+              
+              <section id="panfu">
+                <h2>パンフレット</h2>
+                <p>選択形式にして、パンフページに飛ばす→一つのページに2つのパンフレットの内容を載せる※あくまでも就活用であり、外部に晒さない作りにしなくてはね</p>
+                <ul>
+                  <li>
+                    <img src="img/pamphlet_1-1.jpg" width="" alt="pamphlet">
+                    <p class="caption">パンフレット</p>
+                  </li>
+                </ul>
+              </section>
+              
+              <section  id="imageBoard">
+                <h2>イメージボード</h2>
+                <ul>
+                  <li>
+                    <img src="img/imageBoard_kusa.jpg" width="" alt="imageBoard">
+                    <img src="img/imageBoard_kusa_photo.jpg" width="" alt="imageBoard">
+                    <p class="caption">イメージボード</p>
+                  </li>
+                </ul>
+                <div id="pc2block">
+                  <p class="gg"><img src="img/imageBoard_1_photo_sprite.jpg" width="" alt=""></p>
+                </div><!--pc2block-->
+              </section>
+
+              <section  id="imageBoard">
+                <h2>イメージボード:候補2（パースタイプ）</h2>
+                <ul>
+                  <li>
+                    <img src="img/imageBoard_Parse.jpg" width="" alt="imageBoard">
+                    <p class="caption">イメージボード</p>
+                  </li>
+
+                  <li>
+                    <img src="img/imageBoard_Parse_2.jpg" width="" alt="imageBoard">
+                    <p class="caption">イメージボード</p>
+                  </li>
+                  
+                </ul>
+              </section>
+              
+              <section id="namecard">
+                <h2>名刺</h2>
+                <p>クリックして詳細を表示</p>
+                <ul class="pc3block">               <!--600px→250px-->
+                
+                  <li class="block3"><a href="img/namecard_4_1-600.jpg" data-lightbox="view" title="名刺<br>対象：製菓ショップ<br>個人でお菓子を販売する製菓ショップの名刺。お店のペルソナ設定が30代のおしゃれな女性とあり、レースをあしらったデザインとしている">
+                    <img src="img/namecard_4_1_thumb.jpg" width="300" alt="ロゴ"></a>
+                    <p class="caption">個人製菓店</p>
+                  </li>
+                  
+                  <li class="block3"><a href="img/nameCard_3_1-600.jpg" data-lightbox="view" title="名刺<br>対象：大道芸人<br>子ども、家族を対象にしている。元気で明るく、楽しいイメージを持ってもらう。">
+                    <img src="img/namecard_3_1_thumb.jpg" width="300" alt="ロゴ"></a>
+                    <p class="caption">大道芸人</p>
+                  </li>
+
+                  <li class="block3"><a href="img/nameCard_skw-600.jpg" data-lightbox="view" title="名刺<br>対象：清掃会社<br>クリーンで爽やかなイメージ。何を専門とする清掃会社なのかも一言添えてわかりやすく。">
+                    <img src="img/nameCard_skw_thumb.jpg" width="300" alt="ロゴ"></a>
+                    <p class="caption">清掃会社</p>
+                  </li>
+<!--  template
+                  
+                  <li class="block3"><a href="img/namecard_3_1.jpg" data-lightbox="view" title="名刺<br>対象：〇〇<br>〇〇">
+                    <img src="img/namecard_3_1.jpg" width="300" alt="ロゴ"></a>
+                    <p class="caption">〇〇</p>
+                  </li>
+
+-->
+                </ul>
+              </section>
+              
+              <section id="journal">
+                <h2>取材(大学研究課題)</h2>
+                <ul>取材
+                  <li>
+                    <img src="img" width="" alt="">
+                    <p class="caption">
+                      大学研究課題:地域の魅力的な街を取材する。ターゲットは川越に興味を持った観光客。特に古民家に興味を持った人を対象としている。何度も街を歩く中で開店していたお店を見つけたのがきっかけ。<br>取材の日程を決め、取材書類を用意、実際の取材の尺も考えてスケジュールを立てて実行。<br>
+                      古民家を改造したレストラン、カフェ。他にも様々な催し物にこの店舗を貸し出している。<br>
+                      <br>
+                      
+                    </p>
+                    <p></p>
+                  </li>
+                </ul>
+              </section>
+              
+              <section>
+                <h2>その他制作</h2>
+                <ul>準備中
+                  <li>
+                    <img src="img" width="" alt="">
+                    <p class="caption"></p>
+                  </li>
+                  <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8HRPWvgI53U?si=TfPmTH7l8clfNFc5&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>動画練習1 テーマ：クロマキーを使った画面の合成</p>
+                  </li>
+                  
+                  <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mVEEoplzhK0?si=3-55_JXgiwFvx7Xc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>After Effectでのタイトルアニメーション</p>
+                  </li>
+                </ul>
+              </section>        
+
+            </section><!--works-->
+
+            <section id="contact" class="otherMain">
+            <h1>お問い合わせ</h1>
+            <form id="entryForm" action="#" method="post">
+              <p><strong><span class="require">*</span>は必須項目です。</strong></p>
+              <table class="entryTable">
+                <caption>お客様の情報</caption>
+                
+                <tr>
+                  <th>お名前 *</th>
+                  <td>
+                    <input type="text" name="name" placeholder="シロネコヤマト" required>
+                    <small>※ハンドルネーム可</small>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th>メールアドレス *</th>
+                  <td>
+                    <input type="email" name="email" placeholder="sample@gmail.com" required>
+                    <small>※半角で入力してください</small>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th>コメント</th>
+                  <td><textarea name="comment" rows="4" cols="40" placeholder="ご要望、コメント、質問・・・なんでもOK♪"></textarea></td>
+                </tr>  
+              </table>
+              
+              <div class="entryBtns">
+                <input type="reset" value="リセット" class="btnContact">
+                <input type="submit" value="送信" class="btnContact">
+              </div><!--entryBtns-->
+            </form>
+
+
+            </section><!--contact-->
+            
+      </div><!--innerMain-->
+    </main><!--トップページの-->
+
+    
+    <div class="liner"></div>
+    
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footerlog">
+          <a href="index.html">
+            <img src="img/00_titleLogo1.svg" alt="header_title">
+            <img src="img/00_titleLogo2.svg" alt="header_title">
+          </a>
+        </div>
+        
+        
+        <ul>
+          <li class="dasu">about
+            <ul>
+              <li><a href="#profile">プロフィール</a></li>
+              <li><a href="#quori">資格</a></li>
+              <li><a href="#skill">スキル</a></li>
+            </ul> 
+          </li>
+          
+          <li class="dasu">work
+            <ul>
+              <li><a href="#site">サイト</a></li>
+              <li><a href="#banner">バナー</a></li>
+              <li><a href="#illust">イラスト</a></li>
+              <li><a href="#logo">ロゴ</a></li>
+              <li><a href="#animation">アニメーション</a></li>
+              <li><a href="#panfu">パンフレット</a></li>
+              <li><a href="#imageBoard">イメージボード</a></li>
+              <li><a href="#journal">取材</a></li>
+            </ul> 
+          </li>
+
+          <li class="dasu"><a href="#contact">contact</a></li>
+        </ul>
+
+        
+        <ul class="footerNav">
+          <li>
+            <ul class="sns">
+                <li><a href="mailto:co.yuki.river@gmail.com" target="_blank" class="icon-envelop" title="mail"></a></li>
+            </ul>
+          </li>
+        </ul>      
+      
+      <p class="copyright"><small>Yukiko's works</small></p>
+    </div><!-- /.container -->
+  </footer><!-- /#footer -->
+
+
+</div><!--wrapper-->
+<!--modalwindow用liblary3/ jQuery、Modaal、jquery.cookie.js・もともとのjsに動きを制御するJsを追記する-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="js/mainjavascript.js"></script>
+  
+</body>
+</html>

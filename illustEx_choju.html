@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>yukiko's portfolio</title>
+
+<meta name="description" content="portfolio">
+<meta name="keywords" content="作品,ポートフォリオ">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"><!--検索可避-->
+
+<link rel="icon" href="img/00_favicon.svg" type="image/svg+xml"><!--favicon-->
+
+<!--font-->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reset.css" media="screen"><!--リセット-->
+<link rel="stylesheet" href="css/style.css" media="screen">
+<link rel="stylesheet" href="css/lightbox-2.11.2.css" media="screen">
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><!--library-->
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script><!--  easingかけたい時-->
+<script src="js/gladdy.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+    <header id="header" class="header">
+      <div class="header__inner">
+        <div class="headerdiv">
+          <h1 class="header_title">
+            <a href="index.html">
+                <img src="img/00_titleLogo1.svg" width="" alt="header_title">
+                <img src="img/00_titleLogo2.svg" width="" alt="header_title">
+            </a>
+          </h1><!--header_title-->
+        </div>
+        <div id="js-hamburger" class="navBtn"><!--hum button-->
+            <span></span>     
+            <span></span>
+            <span></span>     
+        </div><!--end hum button-->
+      <div class="container">
+        <div class="header-title">
+          <h1 class="header-logo"><a href="index.html"></a></h1>
+          <p class="header-msg"></p>
+        </div><!--header-title-->
+          <nav id="gnav" class="header_nav">
+            <ul class="container nav-items">
+              <li class="nav-items hvr-float-shadow"><a href="index.html">Top</a></li>
+              <li class="nav-items"><a href="index.html#about">about</a></li>
+              <li class="nav-items"><a href="index.html#works">works</a></li>
+              <li class="nav-items"><a href="index.html#contact">contact</a></li>
+            </ul>
+          </nav><!-- /#gnav -->
+        </div><!--.container-->
+      </div><!--header__inner-->
+    </header><!-- /#header -->
+
+    <p class="pagetop"><a href="#header">to TOP</a></p>
+
+  <main>
+  <div class="innerMain fadeInOther">
+      <div class="otherMain"><!--別ページに移動する.それからサイト内に誘導するボタン入れる-->
+        <h1>鳥獣戯画イラスト</h1>
+        <h2>イラスト活用例 - 新聞広告</h2>
+          <iframe src="pdf/artwork_sinbunkoukoku_2.pdf" width="100%" height="1300px" frameborder="0"></iframe>
+          <h3 class="h3Sitetop">新聞広告</h3>
+          <ul class="aboutSiteList">
+            <li>テーマ：地球温暖化</li>
+            <li>制作期間：3日間</li>
+            <li>コンセプト：身近なキャラと歴史をテーマに親近感あるところから忍び寄る危険</li>
+            <li>ターゲット：毎朝新聞に目を通す40代〜70代の男性をメインとした新聞を読む人。</li>
+            <li>新聞設定：経済や金融、ビジネスを扱う日本⚪︎済新聞を想定している。</li>
+          </ul>
+      
+        <h2>作成過程</h2>
+        <h3>静かに押し寄せる異常性を見たことのあるキャラクターに差し込む</h3>
+        <p>
+          年々上がる気温、夏のたびに悪化する気象。それが当たり前すぎて忘れてしまう異常を客観的に見つめるにはどうすれば良いのかを課題として作った作品です。<br>
+          一度は教科書で見た鳥獣戯画のキャラクターたち。人間たちの世界を風刺しているとも取れる作品ですが、それを現代にもアレンジし、客観的にかつてはなかった暑さへの異常性を和やかなキャラクターに体験してもらいました。
+        </p>
+      </div><!--websiteDescription-->
+</div><!--innerMain-->
+</main>
+    
+    <div class="liner"></div>
+    
+  <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footerlog">
+          <a href="index.html">
+            <img src="img/00_titleLogo1.svg" alt="header_title">
+            <img src="img/00_titleLogo2.svg" alt="header_title">
+          </a>
+        </div>
+<!-- 
+        <ul>
+          <li class="dasu">about
+            <ul>
+              <li><a href="index.html#about">プロフィール</a></li>
+              <li><a href="index.html#about">資格</a></li>
+              <li><a href="index.html#about">スキル</a></li>
+            </ul> 
+          </li>
+
+          <li class="dasu">work
+            <ul>
+              <li><a href="index.html">サイト</a></li>
+              <li><a href="index.html#banner">バナー</a></li>
+              <li><a href="index.html#illust">イラスト</a></li>
+              <li><a href="index.html#logo">ロゴ</a></li>
+              <li><a href="index.html#animation">アニメーション</a></li>
+              <li><a href="index.html#panfu">パンフレット</a></li>
+              <li><a href="index.html#imageBoard">イメージボード</a></li>
+              <li><a href="#journal">取材</a></li>
+            </ul> 
+          </li>
+          <li class="dasu"><a href="index.html#contact">contact</a></li>
+        </ul>
+
+        
+        <ul class="footerNav">
+          <li>
+            <ul class="sns">
+                <li><a href="mailto:co.yuki.river@gmail.com" target="_blank" class="icon-envelop" title="mail"></a></li>
+            </ul>
+          </li>
+        </ul>      
+-->
+      <p class="copyright"><small>Yukiko's works</small></p>
+    </div><!-- /.container -->
+  </footer><!-- /#footer -->
+</div><!--wrapper-->
+  <script src="js/mainjavascript.js"></script>
+</body>
+</html>

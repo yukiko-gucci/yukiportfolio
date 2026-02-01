@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>yukiko's portfolio</title>
+
+<meta name="description" content="portfolio">
+<meta name="keywords" content="作品,ポートフォリオ">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"><!--検索可避-->
+
+<link rel="icon" href="img/00_favicon.svg" type="image/svg+xml"><!--favicon-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reset.css" media="screen"><!--リセット-->
+<link rel="stylesheet" href="css/style.css" media="screen">
+<link rel="stylesheet" href="css/lightbox-2.11.2.css" media="screen"><!--sliderのためのCSS-->
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><!--library-->
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script><!--easingかけたい時-->
+<script src="js/lightbox-2.11.2.js"></script><!--バナーのslider用のjs-->
+<script src="js/gladdy.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+
+    <header id="header" class="header">
+      <div class="header__inner">
+        <div class="headerdiv">
+          <h1 class="header_title">
+            <a href="index.html">
+                <img src="img/00_titleLogo1.svg" width="" alt="header_title">
+                <img src="img/00_titleLogo2.svg" width="" alt="header_title">
+            </a>
+          </h1><!--header_title-->
+        </div>
+        <div id="js-hamburger" class="navBtn"><!--hum button-->
+            <span></span>     
+            <span></span>
+            <span></span>     
+        </div><!--end hum button-->
+      <div class="container">
+        <div class="header-title">
+          <h1 class="header-logo"><a href="index.html"></a></h1>
+          <p class="header-msg"></p>
+        </div><!--header-title-->
+
+          <nav id="gnav" class="header_nav">
+            <ul class="container nav-items">
+              <li class="nav-items hvr-float-shadow"><a href="index.html">Top</a></li>
+              <li class="nav-items"><a href="#about">about</a></li>
+              <li class="nav-items"><a href="#works">works</a></li>
+              <li class="nav-items"><a href="#contact">contact</a></li>
+            </ul>
+          </nav><!-- /#gnav -->
+        </div><!--.container-->
+      </div><!--header__inner-->
+    </header><!-- /#header -->
+    
+    <p class="pagetop"><a href="#header">to TOP</a></p>
+    
+    <main id="main">
+      <div class="innerMain fadeInOther">
+
+            <div id="works" class="otherMain">
+              <h1>works</h1>
+              <h2>サイト制作例</h2>
+              <div id="site">
+                <p>画像クリックで詳細ページへ</p>
+                <ul class="pc2block">
+                    <li class="block">
+                      <a href="site_hyakuninisshu.html">
+                      <img src="img/thumbnail_website_100-1.jpg" alt="siteimage">
+                      <p>人から読み継ぐ百人一首</p>
+                      </a>
+                      <p><a href="https://hyakuninisshu.blue/" target="_blank">直接HPを見る >></a></p>
+                    </li>
+                   <li class="block">
+                      <a href="site_herite.html">
+                      <img src="img/thumbnail_website_herite.jpg" alt="siteimage">
+                      <p>レストランHérite(エリテ)</p>
+                      </a>
+                      <p><a href="http://ss038170.stars.ne.jp/" target="_blank">直接HPを見る >></a></p>
+                    </li>
+
+                    <li class="block">
+                      <a href="site_piero.html">
+                        <img src="img/thumbnail_website_piero.jpg" alt="siteimage">
+                        <p>大道芸人「ピエロのキーちゃん」のホームページ</p>
+                      </a>
+                      <p><a href="site_piero/index.html" target="_blank">直接HPを見る >></a></p>
+                    </li>
+
+                </ul>
+                <div id="area">
+                  <a class="seeBtn" href="index.html">TOPに戻る</a>
+                </div>
+              </div><!--site-->
+
+            </div><!--works-->
+            
+            
+      </div><!--innerMain-->
+    </main><!--トップページの-->
+
+    
+    <div class="liner"></div>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footerlog">
+          <a href="index.html">
+            <img src="img/00_titleLogo1.svg" alt="header_title">
+            <img src="img/00_titleLogo2.svg" alt="header_title">
+          </a>
+        </div>
+        
+<!--         
+        <ul>
+          <li class="dasu">about
+            <ul>
+              <li><a href="#profile">プロフィール</a></li>
+              <li><a href="#quori">資格</a></li>
+              <li><a href="#skill">スキル</a></li>
+            </ul> 
+          </li>
+          
+          <li class="dasu">work
+            <ul>
+              <li><a href="#site">サイト</a></li>
+              <li><a href="#banner">バナー</a></li>
+              <li><a href="#illust">イラスト</a></li>
+              <li><a href="#logo">ロゴ</a></li>
+              <li><a href="#animation">アニメーション</a></li>
+              <li><a href="#pamphlet">パンフレット</a></li>
+              <li><a href="#imageBoard">イメージボード</a></li>
+              <li><a href="#journal">取材</a></li>
+            </ul> 
+          </li>
+
+          <li class="dasu"><a href="#contact">contact</a></li>
+        </ul>
+
+        
+        <ul class="footerNav">
+          <li>
+            <ul class="sns">
+                <li><a href="mailto:co.yuki.river@gmail.com" target="_blank" class="icon-envelop" title="mail"></a></li>
+            </ul>
+          </li>
+        </ul>      
+-->
+      <p class="copyright"><small>Yukiko's works</small></p>
+    </div><!-- /.container -->
+  </footer><!-- /#footer -->
+
+
+</div><!--wrapper-->
+<!--modalwindow用liblary3/ jQuery、Modaal、jquery.cookie.js・もともとのjsに動きを制御するJsを追記する-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="js/mainjavascript.js"></script>
+  
+</body>
+</html>
