@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="layer1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 491.4 602.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4a562e;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22 {
+        fill: #231815;
+      }
+
+      .cls-15 {
+        letter-spacing: -.5em;
+      }
+
+      .cls-15, .cls-16, .cls-17, .cls-6, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23 {
+        isolation: isolate;
+      }
+
+      .cls-15, .cls-16, .cls-17, .cls-18, .cls-19 {
+        font-size: 9.1px;
+      }
+
+      .cls-15, .cls-17, .cls-18, .cls-20, .cls-21 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-3 {
+        fill: #376a6b;
+      }
+
+      .cls-24 {
+        stroke: #ee8dab;
+      }
+
+      .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35 {
+        fill: none;
+      }
+
+      .cls-24, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-34, .cls-35 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-24, .cls-26, .cls-31, .cls-32, .cls-35 {
+        stroke-width: 5.4px;
+      }
+
+      .cls-16, .cls-17 {
+        letter-spacing: .3em;
+      }
+
+      .cls-16, .cls-19, .cls-22 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-4 {
+        fill: #34673d;
+      }
+
+      .cls-5 {
+        fill: #613d67;
+      }
+
+      .cls-25 {
+        stroke: #321d26;
+        stroke-linejoin: round;
+        stroke-width: .5px;
+      }
+
+      .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-33, .cls-34 {
+        stroke: #231815;
+      }
+
+      .cls-26, .cls-30, .cls-34 {
+        stroke-dasharray: 0 0 0 0 0 0 0 0 0 0 0 0;
+      }
+
+      .cls-6 {
+        fill: #7b7b7b;
+        opacity: .5;
+      }
+
+      .cls-7 {
+        fill: #7a7746;
+      }
+
+      .cls-8 {
+        fill: #735346;
+      }
+
+      .cls-9 {
+        fill: #df9757;
+      }
+
+      .cls-28 {
+        stroke-width: .7px;
+      }
+
+      .cls-29 {
+        stroke-width: .4px;
+      }
+
+      .cls-20 {
+        font-size: 13px;
+      }
+
+      .cls-30 {
+        stroke-width: .9px;
+      }
+
+      .cls-31 {
+        stroke: #e50035;
+      }
+
+      .cls-32 {
+        stroke: #4c4948;
+      }
+
+      .cls-33 {
+        stroke-miterlimit: 10;
+        stroke-width: .4px;
+      }
+
+      .cls-10 {
+        fill: #9c496e;
+      }
+
+      .cls-21 {
+        font-size: 19px;
+      }
+
+      .cls-22 {
+        font-size: 11.2px;
+      }
+
+      .cls-11 {
+        fill: #321d26;
+      }
+
+      .cls-12 {
+        fill: #584a79;
+      }
+
+      .cls-13 {
+        fill: #963837;
+      }
+
+      .cls-14 {
+        fill: #3b3e75;
+      }
+
+      .cls-34 {
+        stroke-width: 1.4px;
+      }
+
+      .cls-35 {
+        stroke: #5173b7;
+      }
+    </style>
+  </defs>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-21" transform="translate(269.3 43)"><tspan x="0" y="0">血縁</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-21" transform="translate(56.5 43)"><tspan x="0" y="0">身分</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(272.8 361.7)"><tspan x="0" y="0">三十六歌仙</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-18" transform="translate(271.5 313.9)"><tspan x="0" y="0">※和歌の編集をすることは</tspan></text>
+    </g>
+    <g class="cls-23">
+      <text class="cls-18" transform="translate(271.5 326.7)"><tspan x="0" y="0">　大変名誉なことだった</tspan></text>
+    </g>
+    <g class="cls-23">
+      <text class="cls-15" transform="translate(371.6 326.7)"><tspan x="0" y="0">。</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(272.8 400)"><tspan x="0" y="0">三十六歌仙の撰者</tspan></text>
+    </g>
+  </g>
+  <line class="cls-31" x1="430.2" y1="70.4" x2="326.7" y2="70.4"/>
+  <line class="cls-32" x1="430.2" y1="143.4" x2="326.7" y2="143.4"/>
+  <line class="cls-26" x1="430.2" y1="167.8" x2="326.7" y2="167.8"/>
+  <line class="cls-24" x1="430.2" y1="94.7" x2="326.7" y2="94.7"/>
+  <line class="cls-35" x1="430.2" y1="119.1" x2="326.7" y2="119.1"/>
+  <g>
+    <line class="cls-28" x1="430.2" y1="190.5" x2="326.7" y2="190.5"/>
+    <line class="cls-28" x1="430.2" y1="193.7" x2="326.7" y2="193.7"/>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(269.3 98.9)"><tspan x="0" y="0">臣籍降下</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(269.3 73.9)"><tspan x="0" y="0">天皇</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(269.3 123.9)"><tspan x="0" y="0">藤原家</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(269.4 148.9)"><tspan x="0" y="0">その他</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(269.4 173.9)"><tspan x="0" y="0">未確定</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(269.4 198.9)"><tspan x="0" y="0">婚約</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-21" transform="translate(272.8 478.9)"><tspan x="0" y="0">歌縁</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-21" transform="translate(56.5 478.9)"><tspan x="0" y="0">関係縁</tspan></text>
+    </g>
+  </g>
+  <g>
+    <line class="cls-34" x1="117.9" y1="506" x2="217.8" y2="506"/>
+    <path class="cls-2" d="M223.2,506c-2.5.9-5.7,2.5-7.6,4.2l1.5-4.2-1.5-4.2c2,1.7,5.1,3.3,7.6,4.2Z"/>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(272 510.3)"><tspan x="0" y="0">歌を送る</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(60.2 510.7)"><tspan x="0" y="0">仕える</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(272 542.3)"><tspan x="0" y="0">返答歌</tspan></text>
+    </g>
+  </g>
+  <g>
+    <line class="cls-28" x1="329.7" y1="507.8" x2="429.9" y2="507.8"/>
+    <path class="cls-2" d="M433.7,507.8c-1.8.7-4.1,1.8-5.5,3l1.1-3-1.1-3c1.4,1.2,3.6,2.4,5.5,3Z"/>
+  </g>
+  <g>
+    <line class="cls-28" x1="429.9" y1="539.1" x2="329.7" y2="539.1"/>
+    <path class="cls-2" d="M433.7,539.1c-1.8-.7-4.1-1.8-5.5-3l1.1,3-1.1,3c1.4-1.2,3.6-2.4,5.5-3Z"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-22" transform="translate(137.7 383.2) scale(.8 1)"><tspan x="0" y="0">100</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-29" cx="145.5" cy="378.8" r="8.8"/>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-22" transform="translate(110.3 383)"><tspan x="0" y="0">1</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-33" cx="113.6" cy="378.9" r="8.8" transform="translate(-268.9 479.9) rotate(-88.1)"/>
+    <path class="cls-2" d="M134.1,378.6c-.6,1.1-1.5,1.7-2.6,1.7s-1.5-.4-2.2-1c-.5-.5-1-.8-1.7-.8s-1.5.5-1.9,1.3l-.6-.3c.6-1.1,1.5-1.7,2.6-1.7s1.5.4,2.2,1c.5.5,1,.8,1.7.8s1.5-.5,1.9-1.3l.6.3Z"/>
+  </g>
+  <path class="cls-2" d="M425.7,357l3.9-3.6c.3-.3,0-.7-.3-.7l-5,.3-2.4-4.8c-.2-.3-.7-.3-.8,0l-1.1,4.7-5.1.3c-.4,0-.5.5-.2.7l4.1,3-1.2,5.2c0,.4.3.6.6.4l4-3,4.6,2.7c.3.2.7,0,.6-.5l-1.7-4.7h0Z"/>
+  <path class="cls-11" d="M368,491.7v11.9c0,.2.1.3.3.3h16.2c.2,0,.3-.1.3-.3v-11.9c0-.2-.1-.3-.3-.3h-16.2c-.2,0-.3.1-.3.3ZM383.4,492.1l-7,6.6-6.9-6.6h13.9ZM368.7,503.2v-11.1l7.8,7.4,7.8-7.4v11.1h-15.6,0Z"/>
+  <path class="cls-11" d="M384,524.8h0l-6.3-5.3c-.8-.7-2.1-.7-2.9,0l-6.1,5.3h-.2c-.1,0-.2.2-.2.3v11.1c.1.2.2.3.4.3h15.1c.2,0,.3-.1.3-.3v-11.1c0-.1,0-.2-.2-.3h.1ZM375.2,519.9c.6-.5,1.5-.5,2.1,0l6.1,5.2-7.1,6.4-7-6.4,6-5.2h-.1ZM383.5,535.8h-14.5v-10.1l7,6.4c.1.1.3.1.4,0l7.1-6.4v10.1Z"/>
+  <path class="cls-25" d="M368.3,523.5"/>
+  <rect class="cls-6" x="356.3" y="274" width="73.8" height="25.9" rx="2.4" ry="2.4"/>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(271.5 289.8)"><tspan x="0" y="0">勅撰集の編者</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-20" transform="translate(60.2 410.9)"><tspan x="0" y="0">百人一首の和歌番号</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-21" transform="translate(267.8 258.5)"><tspan x="0" y="0">ステイタス</tspan></text>
+    </g>
+  </g>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-21" transform="translate(56.5 384.5)"><tspan x="0" y="0">番号</tspan></text>
+    </g>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(82.1 81)"><tspan x="0" y="0">天皇</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-9" cx="59.8" cy="77.5" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(82.1 123.8)"><tspan x="0" y="0">皇族</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-5" cx="59.8" cy="120.3" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(82.2 252)"><tspan x="0" y="0">僧</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-8" cx="59.9" cy="248.5" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(82.2 166.5)"><tspan x="0" y="0">女官</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-10" cx="59.9" cy="163" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(82.2 209.3)"><tspan x="0" y="0">母</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-13" cx="59.9" cy="205.7" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(168.7 81)"><tspan x="0" y="0">官人一位</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-12" cx="148" cy="77.5" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(168.7 123.8)"><tspan x="0" y="0">官人二位</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-14" cx="148" cy="120.3" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(168.7 166.5)"><tspan x="0" y="0">官人三位</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-3" cx="148" cy="163" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(168.7 209.2)"><tspan x="0" y="0">官人四位</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-4" cx="148" cy="205.7" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(168.7 252)"><tspan x="0" y="0">官人五位</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-1" cx="148" cy="248.5" r="12.9"/>
+  </g>
+  <g>
+    <g class="cls-23">
+      <g class="cls-23">
+        <text class="cls-20" transform="translate(168.7 295)"><tspan x="0" y="0">官人六位</tspan></text>
+      </g>
+    </g>
+    <circle class="cls-7" cx="148" cy="291.5" r="12.9"/>
+  </g>
+  <path class="cls-27" d="M421.6,398.8l4.3,2.6c.3.2.7,0,.6-.4l-1.5-4.5,3.7-3.4c.3-.2,0-.7-.3-.7l-4.5.2-1.6-4.5c-.1-.3-.6-.3-.7,0l-1.7,4.4-5,.2c-.4,0-.5.5-.2.7l3.8,2.9-1.3,4.9c0,.3.3.6.6.4l3.8-2.8h0Z"/>
+  <g class="cls-23">
+    <g class="cls-23">
+      <text class="cls-18" transform="translate(271.5 377.9)"><tspan x="0" y="0">優れた歌人ベス</tspan></text>
+    </g>
+    <g class="cls-23">
+      <text class="cls-17" transform="translate(335.2 377.9)"><tspan x="0" y="0">ト</tspan></text>
+    </g>
+    <g class="cls-23">
+      <text class="cls-19" transform="translate(346.6 377.9)"><tspan x="0" y="0">3</tspan></text>
+    </g>
+    <g class="cls-23">
+      <text class="cls-16" transform="translate(351.6 377.9)"><tspan x="0" y="0">6</tspan></text>
+    </g>
+    <g class="cls-23">
+      <text class="cls-18" transform="translate(358.9 377.9)"><tspan x="0" y="0">人の総称</tspan></text>
+    </g>
+  </g>
+  <line class="cls-30" x1="342.7" y1="356.4" x2="409" y2="356.4"/>
+  <line class="cls-30" x1="382" y1="395.7" x2="409" y2="395.7"/>
+</svg>
