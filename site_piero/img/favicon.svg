@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c14851;
+        stroke: #8e2e39;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+        stroke-width: .71px;
+      }
+
+      .cls-6 {
+        fill: #ffb266;
+      }
+
+      .cls-2 {
+        fill: #ffd332;
+        stroke: #ffd332;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #000;
+      }
+
+      .cls-4 {
+        stroke: #8e1921;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #b81c22;
+      }
+
+      .cls-5 {
+        stroke: #84171f;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="_レイヤー_2" data-name="レイヤー_2">
+      <ellipse class="cls-3" cx="-1" cy="-29.5" rx="18.5" ry="4"/>
+      <g>
+        <ellipse class="cls-5" cx="20.02" cy="27.94" rx="5.7" ry="19.66" transform="translate(-13.92 33.4) rotate(-63.51)"/>
+        <path class="cls-1" d="M22.02,23.93c6.42,3.2,11.07,6.92,10.37,8.31l4.07-8.17c.69-1.39-3.95-5.11-10.37-8.31-6.42-3.2-12.19-4.67-12.88-3.28l-4.07,8.17c.69-1.39,6.46.08,12.88,3.28Z"/>
+        <path class="cls-4" d="M23.59,20.79c-6.42-3.2-11.07-6.92-10.37-8.31l-4.07,8.17c-.69,1.39,3.95,5.11,10.37,8.31,6.42,3.2,12.19,4.67,12.88,3.28l4.07-8.17c-.69,1.39-6.46-.08-12.88-3.28Z"/>
+        <path class="cls-2" d="M21.71,24.56c-6.42-3.2-11.07-6.92-10.37-8.31l-1.57,3.14c-.69,1.39,3.95,5.11,10.37,8.31,6.42,3.2,12.19,4.67,12.88,3.28l1.57-3.14c-.69,1.39-6.46-.08-12.88-3.28Z"/>
+        <ellipse class="cls-5" cx="28.6" cy="12.87" rx="2.81" ry="12.99" transform="translate(-2.2 18.77) rotate(-35.07)"/>
+      </g>
+      <circle class="cls-6" cx="14.5" cy="6.5" r="3.5"/>
+      <circle class="cls-6" cx="7" cy="34" r="3"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 167.7 183.7">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #efcd6f;
+        stroke: #efcd6f;
+      }
+
+      .st0, .st1 {
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+
+      .st2, .st1 {
+        fill: #241d24;
+      }
+
+      .st1 {
+        stroke: #fff;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_11" data-name="_レイヤー_1">
+    <ellipse class="st2" cx="83.8" cy="88.4" rx="71.5" ry="35.2"/>
+    <path class="st1" d="M38.3,22.7v61c0,9.2,20.4,16.7,45.5,16.7s45.5-7.5,45.5-16.7V22.7H38.3Z"/>
+    <path class="st0" d="M83.8,73.3c-25.1,0-45.5-7.5-45.5-16.7v15c0,9.2,20.4,16.7,45.5,16.7s45.5-7.5,45.5-16.7v-15c0,9.2-20.4,16.7-45.5,16.7Z"/>
+    <ellipse class="st1" cx="83.8" cy="22.7" rx="45.5" ry="16.7"/>
+  </g>
+</svg>
