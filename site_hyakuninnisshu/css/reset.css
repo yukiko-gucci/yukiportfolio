@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+=======================================
+  Reset CSS
+=======================================
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, main, menu, nav, section, summary,
+time, mark, audio, video{
+  margin:0;
+  padding:0;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,main,menu,nav,section{
+  display:block;
+}
+
+html{                /*回転時の文字サイズ自動調節機能をオフ*/
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  color: #373C38;     /*ベースcolorは藍墨茶*/
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: '游明朝','YuMincho','Yu Mincho','Hiragino Mincho ProN',serif;
+}
+
+img{
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,ol{
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse; 
+  border-spacing: 0;
+}
+
+img, input, select, textarea { 
+  vertical-align: middle;
+}
+
+a{
+  color: #59220d;
+  transition: 0.5s;
+  text-decoration: none;
+}
+a:hover {
+  color: #6B486D;
+  cursor: pointer;
+}
+a:hover img {
+  opacity: 0.7;
+  transition: 0.7s;
+  
+}
+
+
+
+.cf::after{
+  content:"";
+  display: block;
+  clear: both;  
+}
+

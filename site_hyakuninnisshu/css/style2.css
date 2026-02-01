@@ -1,0 +1,222 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+  /*box-sizing: border-box;*/
+}
+html, body {
+    font-size: 0.75rem;
+}
+#wrap{
+    width: 100%;
+/*    padding: 2vw; 2vw=0.02×1000vw(の場合)=20px*/
+    margin: 0 auto;
+    background: #1ac;                    /*bgtest*/
+}
+table {
+    width: 100%;
+    box-sizing: border-box;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    background: #1af;                      /*bgtest*/
+}
+.entryTable th,
+.entryTable td {
+/*    border: 1px solid #373C38;*/
+    border-bottom: none;
+}
+table tr {
+    line-height: 28px;
+    height: 28px;
+}
+table tr input,
+table tr select {
+    height: 40px;
+}
+table th {
+    width: 20%;
+    white-space: nowrap;    
+}
+th, td {
+    text-align: left;
+    padding: 3px 5px;
+    /*border: 1px solid #5c5c5c;*/
+    letter-spacing: -0.08rem; /* 文字間を詰め */
+}
+td input {
+    vertical-align: middle; /* ボタンマークと文字との天地合わせ */
+    padding: 1rem 0.5rem;
+}
+
+td select {
+    padding: 0 0.5rem;
+}
+
+table+p { /* Btn */
+    width: 20rem;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-around;
+}
+table textarea {
+    max-width: 60vw;
+}
+
+#entryForm+p { /* copyright */
+    text-align: center;
+}
+button::-moz-focus-inner,
+a::-moz-focus-inner,
+input::-moz-focus-inner {
+    border-style: none;
+}
+/*---------------------- BTN拡大 ----------------------*/
+input[type="radio"], input[type="checkbox"] {
+    transform: scale(2);
+    margin: 1rem;
+    margin-right: 0.3rem;
+}
+
+input[type="radio"]:first-child, input[type="checkbox"]:first-child {
+    margin-left: 0.3rem;
+}
+
+label {
+    margin-right: 0.3rem;
+}
+
+/*ボタン*/
+.entryBtns{
+    text-align:center;
+}
+.entryBtns input{
+    width:200px;
+    margin:10px;
+    padding:10px;
+    background:#fff;
+    border:2px solid #d9cb68;
+    border-radius:4px; 
+    font-size:1em;
+    -webkit-appearance:none;
+}
+.entryBtns input[type="submit"]{
+    background-color:#ddd7a9;
+}
+.entryBtns input:hover{
+    opacity:0.7;
+}
+
+
+
+
+
+
+
+/*---------------------- ここまでBTN拡大 ----------------------*/
+
+@media screen and (min-width: 376px) {
+    html, body {
+        font-size: 0.9rem;
+    }
+    #wrap {
+        width: 70vw;
+        padding: 3vw;
+        margin: 0 auto;
+    }
+    h1, h1+p, #entryForm+p {
+        text-align: left;
+    }
+    table textarea {
+        width: 100%;
+        line-height: 3;
+    }
+    /* Btn */
+    table+p {
+        width: 18rem;
+        justify-content: space-around;
+    }
+/*  エントリーフォーム入力部分  */
+    select, 
+    input[type="text"], 
+    input[type="email"]{
+        width: 100%;
+    }
+    
+    .entryTable input[type="text"]:focus,
+    .entryTable input[type="email"]:focus,
+    .entryTable textarea:focus {
+      background-color: #ffffee;
+      outline: none;
+      border-left: 5px solid #FF7575;
+    }
+      .entryTable input[type="text"]:focus::placeholder,
+      .entryTable input[type="email"]:focus::placeholder{
+        color:transparent;
+      }
+    
+    
+}
+@media screen and (min-width: 769px) {
+      html, body {
+          font-size: 1rem;
+      }
+      #wrap {
+          width: 100%;
+          padding: 10px;
+      }
+      table {
+          width: 100%;
+      }
+      table textarea {
+          max-width: 35rem;
+      }
+      table tr {
+          line-height: 2;
+      }
+      td input,
+      td select {
+          padding: 0.5rem 0;
+      }
+      /* thとtdを2カラムにする */
+      .entryTable th,
+      .entryTable td {
+          display: table-cell;
+          width: auto;
+      }
+
+    /*---------------------- BTN拡大 ----------------------*/
+    input[type="radio"], input[type="checkbox"] {
+        transform: scale(1);
+        margin: 0;
+    }
+
+    input[type="radio"]:first-child, input[type="checkbox"]:first-child {
+        margin-left: 0;
+    }
+
+    label {
+        margin-right: 1rem;
+        vertical-align: middle;
+    }
+    /*---------------------- ここまで拡大情報 ----------------------*/
+}
+
+/* 768px未満のデバイス用のスタイル */
+@media screen and (max-width: 769px) {
+
+    .entryTable th,
+    .entryTable td {
+        display: block;
+        width: 100%;
+    }
+}
+/* 769px以上のデバイス用のスタイル */
+@media screen and (min-width: 769px) {
+    .entryTable th {
+        width: 25%;  /* thの幅を30%に設定 */
+    }
+    .entryTable td {
+        width: 70%;  /* tdの幅を70%に設定 */
+    }
+}

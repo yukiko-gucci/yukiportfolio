@@ -1,0 +1,114 @@
+@charset "utf-8";
+/*hamburger用の  CSS Document。なのでこれは全て↓768px以下の話 */
+#gnav{
+  position: fixed;/*元はabsolute。スクロールした際にTopに止まってしまったままのメニューを動かす。一緒に.navBtnもfixed*/
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;  /*画面いっぱいにするにはw/hを左のような値にする*/
+  height: 100vh;
+  transform: translateX(100%);/*場外にいる。確認は0*/
+  transition: ease .4s;
+  z-index: 9;/*-を入れるとリンクとび反応したい*/
+}
+  /*※※※++++menuが横から出てくるCSS++++※※※******/
+  #gnav.active{            /*activeは仮想class*/
+    transform:translateX(0);/*(※もともと場外に居させておいて、clickのscriptで初期位置に戻る設定)*/
+    background: #fff;
+  }
+/*バーガーボタンのスタイル*/
+@media screen and (max-width:768px){ /*必ずスペースおくこと*/}
+  /* バーガーボタンの基本設定とtransition,
+  transformでの角度回転設定・位置もここで変えられる */
+    .navBtn{
+    display: block;
+    width: 22.5px;
+    top: 20px;
+    right: 6%;
+    position: fixed;
+    z-index: 9999;
+    cursor: pointer;
+ }
+   .navBtn span{/*太さの設定*/
+    display: block;
+    height: 1.5px;
+    width: 100%;
+    background: #373C38;/*藍墨茶*/
+    border-radius: 2px;
+    transition:all .3s ease-out;/*×の動きを変えるのはここ*/
+    cursor:pointer;
+  }
+  /*ボタンの3本線の余白 */
+ .navBtn span:nth-of-type(1),
+ .navBtn span:nth-of-type(2){
+    margin-bottom:6px;
+  }
+  /*バーガーボタンの transform 設定※activeはjavasのための仮想class*/
+   .navBtn.active span:nth-of-type(1){
+    transform:translateY(7.5px/*14px*/) rotate(225deg);/*1本目span14pxオトす→時計回り*/
+}
+  .navBtn.active span:nth-of-type(2){
+ transform:translateX(30px);
+    opacity: 0;   /*2本目span非表示*/
+  }
+  
+  .navBtn.active span:nth-of-type(3){
+    transform:translateY(-7.5px/*-14px*/) rotate(-225deg);/*3本目span14pxアゲる→半時計回り*/
+  }
+  
+/* ---------------ここまでが、バーガーボタン基本とtransition,transform 設定 -------------------------------------*/
+
+@media screen and (min-width: 768px) {
+      .header__nav {
+        position: static;        /*要素の位置をドキュメントフロー内の元の位置に戻します（デフォルトの静的配置）。 */
+        transform: initial;      /*要素の変形を初期状態に(つまり変形を適用しない)*/
+        height: inherit;         /*親要素の高さを継承します*/
+        display: flex;           /*要素をフレックスコンテナ*/
+        justify-content: end;    /*コンテナの右端にする*/
+        width: 50%;              /*親要素の50%*/
+      }
+      #gnav{
+        transform: translateX(0);/*場外にいる・確認は0*/
+        height: 55px;
+        align-items: flex-end;
+        
+      }
+      #gnav li{
+        width: 14%;
+      }
+         .navBtn span{            /*768pxで×は消す*/
+         display: none;          
+         }
+  
+}/*min-width: 768px*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

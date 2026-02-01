@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-size: 0.75rem;
+}
+#wrap{
+    width: 100vw;
+    padding: 3vw;
+    margin: 0 auto;
+}
+table{
+  width: 100%;
+	box-sizing:border-box;
+	border:1px solid #373C38;
+	border-spacing:0;
+	border-collapse:collapse;
+  margin-bottom: 10px;
+}
+
+/*1カラムの時*/
+.entryTable th,
+.entryTable td {
+  display: block;
+  width: 100%;
+  border-bottom: none;
+}
+
+table tr{
+	line-height:28px;
+  height: 28px;
+}
+
+table tr input,table tr select{
+/*    height: 28px;*/
+    height: 40px;
+}
+
+table th{
+    width: 28%;
+    white-space:nowrap;
+}
+th, td{
+	text-align:left;
+  padding:3px 5px;
+	border:1px solid #5c5c5c;
+  
+  letter-spacing: -0.08rem;/* 文字間を詰め */
+}
+td input{
+    vertical-align: middle;/* ボタンマークと文字との天地合わせ */
+    padding:1rem 0.5rem;
+}
+td select{
+    padding:0 0.5rem;
+}
+table+p{        /* Btn */
+    width: 20rem;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-around;
+}
+table textarea{
+    max-width: 60vw;
+}
+.btn{
+	width:6rem;
+	height:32px;
+	text-align:center;
+	vertical-align:middle;
+	border-radius:3px;
+	cursor:pointer;
+}
+.btn:hover{
+	background:#ebfdff;
+}
+#entryForm+p{        /* copyright */
+	text-align:center;
+}
+button::-moz-focus-inner,
+a::-moz-focus-inner,
+input::-moz-focus-inner{
+	border-style:none;
+}
+
+
+/*---------------------- BTN拡大 ----------------------*/
+input[type="radio"],input[type="checkbox"]{
+    transform: scale(2);
+    margin: 1rem;
+    margin-right: 0.3rem;
+}
+input[type="radio"]:first-child,input[type="checkbox"]:first-child{
+    margin-left: 0.3rem;
+}
+
+label{
+    margin-right: 0.3rem;
+}
+/*---------------------- ここまでBTN拡大 ----------------------*/
+
+
+@media screen and (min-width:376px){
+html,body{
+    font-size: 0.9rem;
+}
+#wrap{
+    width: 70vw;
+    padding: 3vw;
+    margin: 0 auto;
+}
+
+h1,h1+p,#entryForm+p{
+    text-align: left;
+}
+table textarea{
+    max-width: 17rem;
+}
+
+/* Btn */
+table+p{        
+    width: 18rem;
+    justify-content: space-around;
+}
+select,input[type="text"],input[type="email"]{
+    width: 14rem;
+}
+}
+
+
+@media screen and (min-width:768px){
+html,body{
+    font-size: 1rem;
+}
+#wrap{
+    width: 600px;
+    padding:10px;
+}
+table{
+    width: 600px;
+}
+table textarea{
+    max-width: 25rem;
+}
+
+/*--------------------- ここから拡大情報 ---------------------*/
+table tr{
+	line-height:2;
+}
+
+td input,td select{
+    padding:0.5rem 0;
+}
+
+/*---------------------- BTN拡大 ----------------------*/
+input[type="radio"],input[type="checkbox"]{
+    transform: scale(1);
+    margin:0;
+}
+input[type="radio"]:first-child,input[type="checkbox"]:first-child{
+    margin-left:0;
+}
+
+label{
+    margin-right:1rem;
+    vertical-align: middle;
+}
+/*---------------------- ここまで拡大情報 ----------------------*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+

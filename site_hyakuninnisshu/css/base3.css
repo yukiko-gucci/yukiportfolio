@@ -1,0 +1,1433 @@
+@charset "utf-8";
+/*=================
+  Base Layout
+=================*/
+html p{
+  line-height: 2.3;
+  font-size: 1.04375em;/*16.7px*/
+  color: #373C38;
+}
+/*container※それぞれ大きくマークアップされた中にcontainerがある。ulにもcontainerついてる*/
+html {
+  scroll-padding-top: 40px; /*すべてのページ内ジャンプは40px分追加*/
+    box-sizing: border-box;
+}
+
+.container {
+  max-width: 940px;  /*本当は980px(padding分-20px)で940px・基準*/
+  margin: 0 auto;
+  padding: 0 20px 0;
+}
+/*++++++追記++++++*/
+.pc-grid-col2{
+  width: 100%;
+}
+
+/*grid*/
+@media screen and (min-width: 768px) {    /*ここの中に768px以上の時の内容を記述*/
+        /*汎用2カラム,3カラム指定*/
+        .pc-grid-col2,
+        .pc-grid-col3 {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        /*3カラムで行が揃わない時の対処法*/
+        .pc-grid-col3::after{
+          content:"";
+          display: block;
+          width:31%;        
+          }
+        /*2カラムの列幅*/
+        .pc-grid-col2 .col {
+          width: 48.9361%;  /*もと460pxに全体幅940px(980px-paddingの20px)*/
+        }
+        /*3カラムの列幅*/
+        .pc-grid-col3 .col {
+          width: 31.9148%;  /*300px/940px*/
+        }   
+        /*pcになった時の文字サイズはem単位で計算*/
+}/*----(min-width: 768px)-768px以上の時の内容-*/
+
+/*=========================================
+  Modules =style?（Block）
+=========================================*/
+/*++++++++header++++++++*/
+.header {
+  position: relative;
+/*  height: 500px; 始めに書いた高さ*/
+/*  min-height: 100vh;*/
+  height:calc(100vh - 60px);
+/*  background: url("../img2/logo_header3.png") center center no-repeat;*/
+  background: url("../img2/header_Back_726.png") center center no-repeat;
+  
+  background-size: cover;
+  z-index: 0;
+  opacity: 1;
+  animation: fadeInBackground 2.5s ease-in-out 2s forwards;/*  2秒遅れて3秒かけてフェードイン */
+}
+
+/* 遅れて背景を出すために擬似要素を使う
+.header::after {
+  content: '';
+  position: absolute; ×relativeはanimationが効かない。instead of z-index
+  z-index: -99999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../img2/header_Back_726.png") center center no-repeat;
+  background-size: cover;
+  opacity: 0;
+  animation: fadeInBackground 2.5s ease-in-out 2s forwards;  /*2秒遅れて3秒かけてフェードイン
+}*/
+
+@media screen and (min-width: 726px) {
+  .header{
+          background: url("../img2/header_Back_960.png") center center no-repeat;
+          background-size: cover;
+      }
+}
+
+
+
+/*=========================================
+  animation:背景画像を遅れてfadeInさせる：背景画像の透明度をCSS animationで変更する
+=========================================*/
+@keyframes fadeInBackground{
+  to {
+    opacity: 1;
+  }
+}
+.header-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 66.66667%;
+  height: 420px;/*420px*/
+  max-width:640px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.header-logo {
+  margin-bottom: 20px;
+}
+.header-msg {
+  line-height: 1.8;
+}
+
+/*+++++iframeタイトルの設定++++++++*/
+
+#titleanime{
+  width: 100%;/*header-titleに対して100%*/
+  margin: 0 auto;
+  height: 480px;
+}
+.uke{
+  width: 100%;
+  height: 100%;
+  border: none;  /*ifreamboxのfreamborderの代わり*/
+  }
+/*------//--iframeの設定--------*/
+
+@media screen and (min-width: 708px) {/*768px*/
+
+    #titleanime{
+      width: 420px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+}
+
+
+/*++++下層ページにあたるheaderのcss++*/
+#downheader{
+  width: 100%;
+  height: 200px;
+  /* position: relative; */
+}
+
+/*---------下層ヘッダーのロゴcenter配置css---------------*/
+.downheaderdiv{
+    width: 100%;
+}
+.downheader_title{
+  display:none;
+  width: 120px;
+  margin: 0 auto;
+  background: #ac2;            /*bg test*/
+
+}
+.header__inner {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  position: relative;
+  /* background: #9fa; */
+}
+
+@media screen and (min-width: 768px) {/*960px*/
+      .downheaderdiv{
+          width: auto; /* この場合、親のflexboxに依存する */       
+          /*width: 6.266666666666667%; 940/150px ※上のChat GPTのためコメントアウト*/
+          margin: 0;
+          padding: 30px 0 0 0;
+      }
+      .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-title, .header_nav {
+        flex: 1;
+      }
+      .header-logo {
+        margin-right: auto;
+      }
+      .nav-item {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .nav-item li {
+        margin: 0 10px;
+      }
+}
+/* resuponsiveのCSS よりもcenterになる */
+@media screen and (max-width: 768px) {
+      .downheader_title{
+        display: flex;
+        justify-content: center;
+      }
+}
+  /*-----------global navigation---------*/
+.header_nav {
+  position:absolute;
+  right:0;
+  left:0;
+  top:0;
+  width:100%;
+  height:100vh;                /*画面いっぱい*/
+  transform: translateX(100%);  /*場外にいる。確認は0*/
+  background-color: #fff;       /*ハンバーガーメニュークリック時のナビゲーションメニュー背景色*/
+  transition: ease .4s;
+  
+}
+@media screen and (min-width: 768px) {/*960px*/
+    .header_nav {
+      position: static;         /*初期値*/
+      transform: initial;       /*初期値に戻したい時に使用*/
+      height: inherit;
+      display: flex;
+      justify-content: end;
+      width: 100%;               /*100%*/
+      background: #c7c;
+      }
+
+/*naviは出るようにする*/
+/*    .nav-items{
+      width: 100%;              itemごとの幅
+      display: flex;
+      align-items: center;       right
+      height: 100vh;
+      justify-content: space-between;
+    }*/
+}
+/*※※※menu出た時の設定：各項目※※*/
+.nav-items{
+      padding-top: 40px;
+      padding-bottom: 28px;
+      }
+      
+@media screen and (min-width: 768px) {/*960px*/
+  .nav-items{
+    padding-top: inherit;
+    padding-bottom: inherit;
+    display: flex;
+        justify-content: space-between;
+/*    align-items:center;*/
+    height: inherit;
+    padding: 2px;
+    background: #3ed;
+  }
+}
+
+
+/*ナビのリンク*/
+.nav-items a{
+  width: 100%;
+  height: inherit;/*親要素に合わせる*/
+  display: block;
+  text-align: center;
+  font-size: 1.25em;/*20px*/
+  font-family: "Wittgenstein", serif;
+}
+.nav-items:last-child a{
+  margin-bottom: 0;
+}
+/*
+.gnav ul {
+  display: flex;
+}*/
+
+.gnav li {
+  width: 20%;/*全体を100%でボタン5個*/
+}
+
+.gnav a {
+  display: block;
+  padding: 10px 0 9px;  /*高さ設定*/
+  color: #373C38;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.25em;/*20px*/
+  font-family: "Wittgenstein", serif;
+  }
+/* 下のライン */
+.gnav li a::after{
+  position: absolute;
+  bottom: 5px;/*線の位置。0pxで下にピッタリ*/
+  left: 5%;
+  content: "";
+  width: 90%;
+  height: 1px;
+  background:linear-gradient(to right,transparent, #A03434 20%, #B12020 80%,transparent);/*両端が透明。真ん中20-80の間が色アリ※範囲としては30％　75％くらいのものが良い*/
+  transform:scale(0,1);
+  transition: transform 300ms;
+  transform-origin: center center;      /*センター出し*/
+}
+
+  li a:hover::after{
+    transform: scale(1,1);
+  }
+.gnav a:hover {
+  font-weight: bold;
+  transition:.65s;
+  transform: scale(1.1);
+}
+
+/*---------section-----------*/
+.section {
+  margin-bottom: 130px;
+}
+.h2kakutitle + p,     /*それぞれ見出しの一個した*/
+  h3+p{
+/*  background:#7D9575;    bgtest*/
+  font-size: 1.158em;
+/*  margin: 0 30px 0 ;  */
+  padding: 0 2.163829787234% 0 6.163829787234%;  /*10px/940*/
+  margin-bottom: 30px;
+}
+
+
+
+/*----------Pickup Menu→身分のClass-----*/
+.mibun-list {
+  text-align: center;
+}
+.mibun-list li {
+  margin-bottom: 20px;
+  border: 1px dotted #d8c7a0;
+  box-sizing: border-box;
+}
+.mibun-text {
+  margin: 15px;
+  font-family: "Osaka-mono", "MS Gothic";
+}
+
+/*------information-------*/
+.info-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.info-list dt {
+  width: 30%;
+  padding: 10px 0;
+  border-top: 1px #d8c7a0 dotted;
+}
+.info-list dd {
+  width: 70%;
+  padding: 10px 0;
+  border-top: 1px #d8c7a0 dotted;
+}
+.info-list :first-of-type {   /*under-lineなくす*/
+  border-top: none;
+}
+
+/*++++++guider-小野小町写真の設定-----*/
+#guider {
+  padding: 50px 0 0 20px;
+  box-sizing: border-box;
+  background: #00ddff20;
+}
+.guider-photo {
+  width: 59.7014%; /* 400÷670×100 */
+  margin: 0 auto 25px;
+}
+
+
+/*squarescrollinformationの記事コーナー。決めた枠内でスクロールしてもらう*/
+#squarescroll{
+  width: 100%;
+  height:66%;  /*隣接の文と高さを合わせる*/
+  overflow-y:scroll;
+}
+
+@media screen and (min-width: 768px) {
+  .guider-photo {
+    width: 54.7619%;/* 230÷420×100 */
+  }
+  
+}
+/*小野小町*/
+.guider-heading{
+  display: block;
+  padding: 8px 1.063829787234043%;/*10px*/
+  margin: 0 auto 10px;
+  border-radius: 2em;
+  background: #d8c7a0;
+  color: #373C38;
+  font-size: 0.875em;/*14px*/
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/*++++メニュー部分++++++++++++*/
+.manu-list{
+  justify-content: center;
+}
+
+.manu{
+  margin: 2.159574468085106% 0;/*20.3px*/
+  text-align: center;
+  width: 100%;    /*初期状態で100%幅を設定 */
+  box-sizing: border-box;/*padding、borderは要素の幅に含める*/
+}
+
+@media screen and (min-width: 768px) {    /*ここの中に768px以上の時の内容を記述*/
+        .manu{/*マヌリストの配置設定*/
+          width: 48.9361%;
+        }
+}
+/*-goods--あと、それをはじめとしたボタンメニュー--*/
+.item{
+  text-align: center;
+  font-size: 0.75em;  /*12px*/
+  margin-bottom: 30px;
+}
+
+.guider-msg{
+  text-align: center;
+  font-style: normal;
+  font-size: 0.75em;/*12px*/
+}
+
+.item p{background: #D9A3D6;    /*bgtest*/}
+
+.btn-menu {
+  display: inline-block;
+  margin-bottom: 13px;
+  padding: 12px 0;
+  width:52.765%;/*120px*/
+  border-radius: .2em;
+  border-bottom: dotted 1px #aaa;
+  color: #373C38;
+  font-weight: bold;
+  font-family: "Osaka-mono", "MS Gothic";
+  text-decoration: none;
+  font-size: 1.55em;  /*18px*/ 
+}
+
+.btn-menu:first-child{
+  margin-top: 13px;
+}
+.btn-menu:hover{
+  font-weight: bold;
+/*  text-shadow: 2px 2px 3px #ddd;*/
+  box-shadow:12px 12px 9px rgba(100,100,100,0.5);
+}
+
+@media screen and (min-width: 768px) {    /*768px以上の時の内容を記述*/
+ 
+ /*ボタンを横ぐみにする*/
+ .item{
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;  /*横書き強制表示*/
+  }
+  .item .btn-menu {
+    margin-right: 30px;
+    width: 125px;
+  }
+  .item .btn-menu:first-child {
+    margin-left: 30px;
+  }
+
+
+}/*@media min-width:768px*/
+
+
+/*-----banner-----*/
+
+.banner-list li{
+  margin-bottom: 20px;
+}
+.banner-list li img{
+  border: #fff 5px solid;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+/*----footer-----*/
+.footer{
+  padding: 20px 0;
+  background: #eee;
+}
+.pripol{
+  text-align: center;/*m0-auto はblock要素にしか効かない。inlineblockにはこれ*/  
+}
+
+.pripol li{
+  background: #ffffff50;
+  width: 35%;
+  padding: 5px 0;
+  margin: 5px 0;
+  margin-right: 5px 0;
+  text-align: center;
+  font-size: 0.9em;
+    display: inline-block;
+}
+
+@media screen and (min-width: 768px) {  
+  footer .nav{
+      text-align: center;
+  }
+  
+  .pripol li{
+      display:inline-block;
+      width: 20%;
+  }
+}
+
+.references{
+  font-size: .65em;
+  margin: 0 8.04166667% 32px;/*10px*/
+  padding-top: 10px;
+  line-height: 2.05;
+}
+
+/*-----SNSアイコン位置の設定-----*/
+.sns{
+  padding: 20px;
+  text-align: center;
+}
+.sns li{
+  display: inline-block;
+}
+.sns a{
+  display: block;
+  padding: 10px 9px;
+  color: #373C38;          /*ベースカラー*/
+  text-decoration: none;
+  font-size: 24px; 
+}
+.sns a:hover{
+  opacity: 0.55;
+  transform:scale(1.2) translate(0,-5px);
+  transition-timing-function: ease;
+}
+
+/*--------icon fonts----------------*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?oetm3i');
+  src:  url('fonts/icomoon.eot?oetm3i#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?oetm3i') format('truetype'),
+    url('fonts/icomoon.woff?oetm3i') format('woff'),
+    url('fonts/icomoon.svg?oetm3i#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-x:before {
+  content: "\e900";
+}
+.icon-youtube:before {
+  content: "\e912";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-pinterest:before {
+  content: "\ead1";
+}
+
+/*--------//icon fonts-------*/
+
+
+/*copyright*/
+.copyright {
+  text-align: center;
+}
+
+#yomimono-box{
+  max-width: 85%;/*100%にした場合、変な余白が左にできてしまう*/
+  position: fixed;/*fixed*/
+  left: 0px;
+  top: 77%;
+  z-index: 99;
+  background:#fe9;
+  opacity: 0;
+  animation: fadeInBackground .2s ease-in-out 5s forwards;  /*5秒遅れて3秒かけてフェードイン*/ 
+}
+.virticabtn{
+  writing-mode: vertical-rl;/*縦文字*/
+  border: 1px solid #373C38;
+  padding: 20px 8px;
+  color: #373C38;
+/*  text-decoration: none;*/
+  letter-spacing: .7em;
+  font-size: 1.5em;
+  }
+
+
+/*+++++pagetopボタンのCSS+++++*/
+.pagetop{
+  display: none;/*最初はhide*/
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+}
+.pagetop a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+}
+.pagetop a:hover {
+  background: rgba(255,255,255,0.8);
+  color: #373C38;
+  font-weight: bold;
+}
+.pagetop a::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border-top: 1px solid #59220d;
+  border-right: 1px solid #59220d;
+  transform: rotate(-45deg);
+}
+/*---//page top------*/
+
+
+
+/*==========================
+  Modules（Parts）
+=========================================*/
+
+h2{/*menuボタンの上にくるのを防ぐ*/
+  position: relative;
+  z-index: 9;
+}
+
+/*-----Heading------*/
+.h2kakutitle{
+  margin-bottom: 40px;
+  padding: 20px 0 20px 20px;
+  border-bottom: #373C38 1px dotted;
+  color: #373C38;
+  font-size: 1.4775em;/*16/23px*/
+  font-weight: bold;
+  font-family: serif;
+  overflow: hidden;
+  position: relative;
+}
+section{              /*各クラスの余白*/
+  margin-bottom: 100px;
+}
+.container:first-of-type section{
+  margin-top: 50px;
+}
+
+/*メインコンテンツ最初だけ*/
+
+
+/*項目アイコン*/
+.h2kakutitle::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 26px;
+  margin-right: 5px;
+  background: url("../img2/favicon.svg") 0 1px no-repeat;
+  background-size: contain;
+  position: relative;
+  bottom: -3px;
+}
+
+/*各タイトルの右、もっと」ボタン*/
+.more{
+  float: right;
+  display: inline-block;
+  padding: 5px 5px 5px 10px;
+  background: #373C38;
+  border-radius: 2em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13.5px;
+  line-height: 1;
+  margin-top: 7px;
+}
+
+.more:hover{
+  opacity: 0.7;
+}
+
+/*三角アイコン*/
+.more::after {
+  content: "";
+  margin-bottom: 2px;
+  margin-left: 5px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: transparent 5px solid;
+  border-left-color: #fff;
+  vertical-align: middle;
+}
+#intro-box{
+  margin-bottom: 30px;
+}
+.intro_h3{
+  font-size:  1.4375em;/*h2kakutitleと同じ*/
+  margin-bottom: 30px;
+  padding: 0 3.191489361702127%;/*30px*/
+  color: #373C38;
+  text-shadow: 5px 5px 7px #D3C2C3;
+}
+.intro_p{
+  line-height: 2.5;
+}
+
+/*spanで文章にLineをつける*/
+.linemark-pink{
+  padding-bottom: 10.5px;
+  background: url("../img2/line_limark_pink.png") 0 2px;
+}
+.linemark-yellow{
+  padding-bottom: 10.5px;
+  background: url("../img2/line_limark_yellow.png") 0 2px;
+}
+
+
+.linemark-title{
+  border-bottom:5px solid #FFAAAA;
+  
+}
+
+
+
+/*++++++++++++++
+凡例キャプション
++++++++++++++++++*/
+#popup {
+  display: none; /* label でコントロールするので input は非表示に */
+  
+}
+.popup-open {
+  position: fixed;  /*buttonの場所指定*/
+  bottom: 3.2em;
+  left:5.78%;
+  width: 90px;
+  height:90px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff70;
+  /*以下は文字を中に入れるためのCSS*/
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #373C38;
+  font-weight: bold;
+}
+.popup-open:hover{
+  background: #fff;
+  border: none;
+  transition: .4s;
+}
+.popup-overlay {
+  display: none; /* input にチェックが入るまでは非表示に */
+}
+#popup:checked ~ .popup-overlay {
+  display: block;
+  
+  z-index: 9999;
+  background-color: #00000020;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.popup-window {
+  width: 90vw;
+  height: 70vh;
+  max-width: 460px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 3s ease, transform 3s ease;
+  }
+#popup:checked ~ .popup-overlay .popup-window {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup-text {
+  margin: 0;
+}
+.popup-text:not(:last-of-type) {
+  margin-bottom: 1em
+}
+.popup-close {
+  cursor: pointer;
+  position: absolute;
+  top: -26px;
+  right: 0;
+}
+
+    /*追記。以下はjs用の仮想セレクタ。※隠したはずのメニューができて困った時のCSS*/
+    
+ .no-scroll {
+  overflow: hidden;
+}
+
+/*============================
+＊＊個人プロフィールのcss
+============================*/
+/*++++++h3項目(身分ごとのタイトル)++++++*/
+.h3mibun-title{
+  font-family: serif;
+  margin-top: 49px;          /*19px+40px 上項目との余白*/
+  margin-bottom: 30px;
+  padding: 0 0 0 1.25em;
+  color: #373C38;
+  font-size: 1.4375em;/*16/23px*/
+  border-left: 5px solid #373c38; 
+/*  background: url("../img2/icon_mibun_tenno.svg") 300px 50px no-repeat;*/
+}
+
+#tenno,#kouzoku{
+  margin-bottom: 130px;
+/*  background: #6ac;              bgtest*/
+}
+
+/*++++各個人共通項++++++++*/
+
+    .kojin{
+      margin-bottom: 140px;    /*個人ごとの余白*/
+   /*   background: #FCECEB;     時代カラー平安前期*/
+      padding: 10px 2.163829787234% 5px;  /*10px/940*/
+    }
+        .gb-nara { background-color: #fbe1e0; }
+        .gb-heiannmae { background-color: #fcf4d7; }
+        .gb-heiannaka { background-color: #d6e7cc; }
+        .gb-sekkan { background-color: #cfd7e6; }
+        .gb-sengoku { background-color: #dbc4be; }
+/*名前box*/
+      .namebox{
+        display: flex;      /*  一列で名前を出す*/
+        flex-wrap: wrap;
+      }
+            /* 身分ごとのカラーリング     */
+            #tenno .namebox{background: #D09357;}         /*天皇*/
+            #kouzoku .namebox{background: #6B486D;}         /*皇族*/
+            #haha .namebox{background: #9D4544;}         /*母*/
+            #nyokan .namebox{background: #9D496F;}         /*女官*/
+            #kan1 .namebox{background: #574B79;}         /*官1*/
+            #kan2 .namebox{background: #3B3E75;}         /*官2*/
+            #kan3 .namebox{background: #36586E;}         /*官3*/
+            #kan4 .namebox{background: #35673D;}         /*官4*/
+            #kan5 .namebox{background: #4A562E;}         /*官5*/
+            #kan6 .namebox{background: #7C7539;}         /*官6*/
+            #sou .namebox{background: #745347;}         /*僧*/
+            
+       .name {
+        font-size: 1.8em;
+        letter-spacing: .13em;
+          color: #fff;
+        }
+        .name p{
+          color: #fff;
+        }
+      .no {
+        width:12.2%;
+        text-align: center;
+        font-size: 2.5em;/*40.5px*/
+        color: #fff;
+      }
+      .rub-iti,.rub-ni {
+        font-size: .5em;
+        letter-spacing: .08em;
+        color: #fff;
+      }
+       .rub-ni{
+         padding-left: 30px;
+      }
+      
+      .other-name{
+      /*font-family:'Kozuka Gothic Pro';*/
+        letter-spacing: .2em;
+        color: #fff;
+      }
+
+/*詩box*/
+      .songbox{
+        padding-top: 20px;
+        padding-left: 13px;
+        margin-bottom: 35px;
+        /*  background: #d9f;        bgtest*/
+      }
+      .songex {
+        margin: 0 0 25px;
+        color: #4c4948;
+        font-size: 1.1em;
+        letter-spacing: 0em;
+        font-weight: bold;
+
+      }
+      .song{
+        margin: 0 0 23px;
+        font-family:'Hiragino Mincho Pro';
+        font-size: 1.8em;/*26.3px(1.8em)はpcsizeで,*/
+        letter-spacing: .12em; 
+        font-weight: bold;
+        line-height: 1.6;
+/*        background: #def;*/
+      }
+
+      .yaku {
+        margin-bottom: 25px;
+        padding-left: 20px;
+        font-family:'Toppan Bunkyu Gothic';
+        font-size: 1.12em;/*20px*/
+        letter-spacing: 0.05em;
+        font-weight: bold;
+        line-height:1.5;
+      }
+      
+      
+     /*アイコンを一列にするためのcss*/
+      .kikkakeicon{
+        margin: .14rem;
+      }
+       .episode{
+        font-size: 1.05em;  /*10.9px*/
+        font-weight: 580;
+        line-height: 1.2;
+        text-justify:auto;
+      }
+            
+      
+/*人物box*/
+      .personbox{
+      background: #fff;
+      padding: 2.1276% 20px;
+      
+      }
+      .copysquare{  /*人物コピーひとこと！*/
+        margin-bottom: 10px;
+/*        width: 60%;*/
+        padding: 6px 5.24% 5px;
+        color: #fff;
+        line-height: 2;
+        font-weight: bold;
+        font-size: 1.8em;
+        text-align: center;
+/*        font-family:'Kozuka Gothic Pr4N';*/
+      }
+          /*身分ごとのカラーリング変更*/    
+            #tenno .copysquare{background: #d48854;}
+            #kouzoku .copysquare{background: #6B486D;}
+            #haha .copysquare{background: #9D4544;}
+            #nyokan .copysquare{background: #9D496F;}
+            #kan1 .copysquare{background: #574B79;}
+            #kan2 .copysquare{background: #3B3E75;}
+            #kan3 .copysquare{background: #36586E;}
+            #kan4 .copysquare{background: #35673D;}
+            #kan5 .copysquare{ background: #4A562E;}
+            #kan6 .copysquare{background: #7C7539;}
+            #sou .copysquare{background: #745347;}
+
+      .oneline{
+        display: flex;      /* 詳細とイラストを一列に*/
+        flex-wrap: wrap;
+/*        border: solid 1px #239;*/
+      }
+      .profexpress{
+        margin-bottom: 10px;
+/*        background: #edf;        gbtest*/
+        font-size: 1.05em;
+        font-weight: bold;
+        line-height: 1.2;
+        text-justify:auto;
+        }
+      /*◆◆人物詳細◆◆*/
+      .detail {
+        width: 22em;  /*人物紹介は画面よりもっと右*/
+        font-size: 0.93em;
+        font-weight: bold;
+        display: flex;
+        flex-wrap: wrap;
+/*        background: #aae;        bgtest*/
+      }
+      .detail dt{
+        width:40%;
+      }
+      
+      .detail dd{
+        width:60%;
+      }
+      .personcopy{
+        line-height:1.2;
+        font-size: 2.15em;/*17.5px*/
+      }
+      .ilust{
+        margin:0 auto;
+        width: 80%;  /*フルードイメージ化※できない*/
+        height: auto;
+      }
+      
+@media screen and (min-width: 768px) {
+      .song{
+          margin-bottom: 15px;
+          font-family:'Hiragino Mincho Pro';
+          font-size:2em;/*mobile(1.6em)*/
+        }
+      .songex{
+        font-size: 1.5em;
+      }
+      .episode{
+        text-align: .4;
+      }
+      .copysquare{  /*大化の改新*/
+        font-size: 1.9em;
+        width: 100%;
+        }
+    /*以下３セレクタは一列にするためのCSS*/
+        .oneline{
+          display: flex;
+          justify-content: space-between;
+        }
+        .unique {
+          max-width: 40%
+        }
+        .ilust{
+          max-width:60%;
+        }
+        .profexpress{
+          width: 110%;
+          line-height: 1.5;
+        }
+      }/*(min-width: 768px)*/
+
+/*プロフページ他も見るbtn*/     
+.mokujiBtn{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+.toKajinTop,
+.toMibunTop{
+  padding: 10px 20px;
+  margin: 0 auto;
+  /*background: #C79C5B;    bgtest*/
+}
+.toKajinTop button,
+.toMibunTop button{
+  width: 100%%;/*180px*/
+  height:47px;
+  background: rgba(255,255,255,0.8);
+  border-radius:3px;
+  border:none;
+  }
+  
+.toKajinTop button:hover,
+.toMibunTop button:hover{
+  font-weight: bold;
+  text-shadow: 2px 2px 3px #ddd;
+  background:#fff;
+  box-shadow:12px 2px 5px 1px rgba(0,0,0,0.29);
+  transition: .3s;
+  transition-timing-function: ease;
+  }
+  
+@media screen and (min-width: 768px) {
+        
+      /*以下セレクタは縦→横にするためのCSS*/
+        .mokujiBtn{
+          width: 60%;
+          padding-left: 42%;
+          display: flex;
+        }
+}
+   
+   
+   
+/* 他もみるボタン */
+.otherMoreBox{
+  width: 60%;
+  margin: 0 auto 120px;
+  padding: 0 50px 20px;
+  border: 2px dotted #373c38;
+  font-family:'Toppan Bunkyu Gothic';
+  font-weight: bold;
+  border-radius: 5px;
+  position: relative;
+}
+.otherMoreBox p{
+  /* padding:5px 0 5px 25px; */
+  text-align: center;
+  position: relative;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  top: -25px;
+  right: 20px;  
+  background: #fff;          /*bgtest*/
+  /* border: 2px dotted #999; */
+  
+}
+.otherMoreBox ul {
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap: 10px; /* 要素間のスペースを追加 */
+  padding: 0;
+}
+
+.otherMoreBox ul li{
+  width:75px;
+  height:75px;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  /*以下文字真ん中配置のCSS*/
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ECECEC; /*例として赤色の背景色*/
+}
+.otherMoreBox ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* リンクを正円にするための設定 */
+  text-decoration: none; /* リンクの下線を削除 */
+  color: inherit; /* リンクのテキスト色を親要素から継承 */
+}
+.otherMoreBox ul li a:hover{
+  font-weight: bold;
+  text-shadow: 2px 2px 3px #ddd;
+  background:#fff;
+  box-shadow:2px 12px 10px rgba(1,1,1,0.20);
+  transition-timing-function: ease;
+}
+@media screen and (max-width: 767px) {
+      .otherMoreBox ul li {
+        width: calc((100% - 20px) / 2); /* 2つで1行にするための幅調整 */
+         height: auto; /* 自動で高さを設定 */
+        aspect-ratio: 1 / 1; /* 幅と高さの比率を1:1に設定 */ 
+        }
+}
+
+@media screen and (min-width: 768px) {
+      .otherMoreBox ul {
+        gap: 20px; /* 要素間のスペースを調整 */
+      }
+      .otherMoreBox ul li {
+        width: calc((100% - 80px) / 5); /* 5つで1行にするための幅調整 */
+        height: auto; /* 自動で高さを設定 */
+        aspect-ratio: 1 / 1; /* 幅と高さの比率を1:1に設定 */
+      }
+}
+
+/*============================================
+  articleページCSS
+==============================*/
+
+.h2kakutitle_article{
+  margin-bottom: 30px;
+  padding: 10px 0;
+/*  background: #fdd;     bgtest*/
+  font-size: 1.7375em;/*ベーシックh2と同じ*/
+  text-align: center;
+}
+.h2kakutitle_article::before,
+.h2kakutitle_article::after{
+  content: "";
+  display: inline-block;
+  width: 19.6382978723404%;/*100px*/
+  height: 26px;
+  margin-right: 0.53191489%;/*5px*/
+/*  background: #f99;      bgtest*/
+  background-size: contain;
+  position: relative;
+  bottom: -3px;
+}
+.h2kakutitle_article::before{
+  background: url("../img2/favicon.svg") 12px 1px no-repeat;
+}
+.h2kakutitle_article::after{
+  background: url("../img2/favicon.svg") 60px 1px no-repeat;
+}
+.article-title-p{
+  max-width: 65%;
+  margin: 0 auto 30px;
+  font-weight: bold;
+  font-size: 1.2em; 
+}
+
+/*--main article 線のCSS-----*/
+.lineremark{
+  padding: 10px 0;
+  background: url("../img2/Line_limark_yellow.png") 0 5px repeat-x;
+}
+
+/*--main article---------*/
+.article-info{
+  padding: 20px;
+  margin-bottom: 30px;
+/*  background: #DCD2BB;*/
+}
+
+.article-info-ph img{
+  margin-bottom: 2px;
+  padding: 10px 10px;  /*1.041666666666667%・%表記の10px横*/
+  box-sizing: border-box;
+/*  background: #fcb;*/
+}
+
+/*記事の見出しCSS*/
+.article-info-title {
+  font-size: 18px;
+  padding: 0 30px;
+/*  background: #edd;*/
+  display: inline-block;  
+}
+
+/*
+.article-info-con p{
+  clear: left;
+  float: left;
+  width: 7em;
+  margin-bottom: 10px; 
+}
+*/
+@media screen and (min-width: 768px) {
+      .article-info{
+        display: flex;
+        justify-content:space-between;
+      }
+
+      .article-info-title {
+      font-size: 18px;
+      background: #edd;
+      display: inline-block;
+      padding: 75px 0;/*middleのための*/
+      }
+      .article-info-ph {
+        width: 31.9148%;
+      }
+      .article-info-data {
+        width: 65.9574%;
+      }
+  
+}/*min-width: 768px*/
+
+/*----------Pickup Menu→articleのClass-----*/
+.article-list {
+  text-align: justify; /*均等割付け流れ*/
+}
+.article-list li{
+  margin-bottom: 20px;
+  border: 1px dotted #d8c7a0;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.article-text {
+  margin: 15px;
+}
+.date-top{
+  text-align: right;
+  padding: 2.878% 5.878% 0 0;
+  margin-bottom: -10px;
+}
+
+/*=========================================
+  blog_news_top記事ページ。3（写真ひづけ）:7で（）
+=========================================*/
+
+#kaku-article{
+  margin-top: 50px;
+  padding:0 20px;
+  font-size: 16px;
+}
+.article-left{
+/*  background: #acf;*/
+  padding: 8.5% 12px 0 0;
+}
+.post-date{
+  text-align: right;
+  padding: 15px 0;
+}
+.articleline{
+  padding-top: 50px;
+}
+.return{
+/*  background: #fed;*/
+}
+.return-btn,
+.contact-btn{
+  background: #373c38;
+  text-align: center;
+  width: 250px;
+  padding: 10px 5px; 
+  margin: 0 auto 20px;
+  border-radius: 3px;
+}
+.return-btn a,
+.contact-btn a{
+  color: #fff;
+  text-decoration: none;
+  font-family: "Osaka-mono","MS Gothic";
+}
+#googleform iframe{
+  width:100%;
+  height:1643px;
+}
+
+/*=========================================
+ privacyページ
+=========================================*/
+
+.priVaP{      /* section間の余白 */
+  margin-bottom: 80px;
+}
+.ppmore{
+  font-weight: bold;
+  margin: 0 5px;
+  font-size: 105%;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    #kaku-article{
+/*      background: #eef;*/
+      display: flex;
+      justify-content: space-between;
+    }
+    .article-left{
+      width: 37.234042553191489%;  /*350/940*/
+      padding: 50px 0 0 1.3%;
+    }
+    .article-right{
+      width: 60.638297872340426%;  /*570/940*/
+    }
+    
+    .lineremark-ash{
+      background: url("../img2/line_limark_ash.png") 0 0 repeat-x;
+    }
+    /*Googleお問い合わせフォーム*/
+    #googleform iframe{
+      width:940px;
+      height:1543px;
+    }
+    
+}
+
+/*=========================================
+  Utilities
+=========================================*/
+
+/* マージン
+---------------------------------*/
+.mb0{ margin-bottom: 0 !important;}
+.mb5{ margin-bottom: 5px !important;}
+.mb10{ margin-bottom: 10px !important;}
+.mb15{ margin-bottom: 15px !important;}
+.mb20{ margin-bottom: 20px !important;}
+.mb25{ margin-bottom: 25px !important;}
+.mb30{ margin-bottom: 30px !important;}
+.mb35{ margin-bottom: 35px !important;}
+.mb40{ margin-bottom: 40px !important;}
+.mb45{ margin-bottom: 45px !important;}
+.mb50{ margin-bottom: 50px !important;}
+
+/* 左右行揃え
+---------------------------------*/
+.ta-l{ text-align: left; }
+.ta-r{ text-align: right; }
+/*.ta-c{ text-align: center; }*/
+
+
+/* フロート／フロート解除
+---------------------------------*/
+.fl{ float:left; }
+.fr{ float:right; }
+.fl-img{ float: left; margin-right: 10px; margin-bottom: 10px;}
+.fr-img{ float: right; margin-left: 10px; margin-bottom: 10px;}
+.clear{ clear:both; }
+
+/* clearfix */
+.clearfix:after {
+  content: ""; 
+  display: block; 
+  clear: both; 
+}
+
+
